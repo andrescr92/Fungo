@@ -1,9 +1,12 @@
-##Fungo<br>
-<b>¿En qué consiste el proyecto?</b> En una aplicación tipo "Waze"(de geoposicionamiento global), la cual posea el objetivo de guiar a los estudiantes dentro de la Universidad de Costa Rica. Los recintos estarían divididos acorde a una clasificación determinada: facultades, sodas, bibliotecas, etc.  Esta aplicación podría contar con:  
+##![haroopad icon](https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQWr0jR5_wG9R4twg-bK2-lHCTD0FnzJGEVkgKDwwEWLIyVTAL3)Fungo <br>
 
-* La publicación de anuncios importantes sobre actividades u otras noticias que los estudiantes deseen dar a conocer. 
+![haroopad icon](https://lh3.ggpht.com/zMa6rFbJBWM9_QaN_7xi0BN3z7mb4cdDBfEi4I7SCVb_vHe4sS04e2IIO-SBU8iCc7s=h900)
 
-* Fotografías sobre las distintas áreas que conforman la Universidad, por ejemplo, las bibliotecas.    
+<b>¿En qué consiste el proyecto?</b> En una aplicación tipo "Waze"(de geoposicionamiento global), la cual posea el objetivo de guiar a los estudiantes dentro de la Universidad de Costa Rica. Los recintos estarían divididos acorde a una clasificación determinada: facultades, sodas, bibliotecas, etc.  Esta aplicación podría contar con:
+
+* La publicación de anuncios importantes sobre actividades u otras noticias que los estudiantes deseen dar a conocer.
+
+* Fotografías sobre las distintas áreas que conforman la Universidad, por ejemplo, las bibliotecas.
 
 * Conformar un sistema de usuarios que les permita interactuar entre ellos, en el cual el ingreso esté regulado mediante la solicitud del número de carné. 
 
@@ -13,20 +16,20 @@
 
 * Un juego el cual pueda ayudar a los estudiantes de primer ingreso a ganar puntos, ya que con estos se le otorgan ciertos privilegios.
 
-* El envío de la localización actual de una persona a otra.    
+* El envío de la localización actual de una persona a otra.
 
-* Una categoría donde se encuentre información sobre el bus universitario tal y como el lugar donde se hallan sus paradas, sus horario, su posición según el satelite, etc. 
+* Una categoría donde se encuentre información sobre el bus universitario tal y como el lugar donde se hallan sus paradas, sus horario, su posición según el satelite, etc.
 
-* Un listado de los profesores con sus respectivas oficinas especificadas en cada facultad.  
-	#####Ficha Técnica 
-	
+* Un listado de los profesores con sus respectivas oficinas especificadas en cada facultad.
+	#####Ficha Técnica
+
 		Plataforma Destino:
 
   							El software se encuentra destinado hacia 2 plataformas de dispositivos móviles (Android & IOS), y así como también está destinado para sistemas operativos de computadoras de escritorio (Windows).
-    
+
     	Audiencia:
                 			 Principalmente para jóvenes y adultos, ya que  es la población principal que se puede encontrar en el recinto universtario.
-                
+
         Productos Similares:
         					 Como se mencionó anteriormente nuestro software se inspiró en la aplicación de geoposicinamiento global para dispostivos móviles llamada "Waze". Solamente que el producto está destinado únicamente para las instalaciones universitarias, de manera que estudiantes (tanto de nuevo ingreso como veteranos), profesores, personal administrativo, empleados y visitantes de esta institución puedan ubicarse fácilmente a través del recinto.
 
