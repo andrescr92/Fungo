@@ -1,6 +1,4 @@
-##![haroopad icon](https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQWr0jR5_wG9R4twg-bK2-lHCTD0FnzJGEVkgKDwwEWLIyVTAL3)Fungo <br>
-
-![haroopad icon](https://lh3.ggpht.com/zMa6rFbJBWM9_QaN_7xi0BN3z7mb4cdDBfEi4I7SCVb_vHe4sS04e2IIO-SBU8iCc7s=h900)
+##![haroopad icon](https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQWr0jR5_wG9R4twg-bK2-lHCTD0FnzJGEVkgKDwwEWLIyVTAL3)Fungo
 
 <b>¿En qué consiste el proyecto?</b> En una aplicación tipo "Waze"(de geoposicionamiento global), la cual posea el objetivo de guiar a los estudiantes dentro de la Universidad de Costa Rica. Los recintos estarían divididos acorde a una clasificación determinada: facultades, sodas, bibliotecas, etc.  Esta aplicación podría contar con:
 
