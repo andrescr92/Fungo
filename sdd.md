@@ -18,7 +18,7 @@
 * Una categoría donde se encuentre información sobre el bus universitario tal y como el lugar donde se hallan sus paradas, sus horario, su posición según el satelite, etc. 
 
 * Un listado de los profesores con sus respectivas oficinas especificadas en cada facultad.  
-		Ficha Técnica 
+	#####Ficha Técnica 
 	
 		Plataforma Destino:
 
