@@ -32,7 +32,7 @@
 
 #####Antecedentes
 
-Es importante la simulación del mapa del campus universitario, debido a que al ser de gran extensión  es muy probable que las personas tiendan a perderse. Por lo que se decidió que alguien debía de velar por todos esos problemas. Al dar la ubicación de los distintos edificios y un mapa detallado de estos, se ayuda al usuario en tiempo real y con un mayor grado de detalle (muy superior al de los mapas dados comúnmente por la institución).
+Es importante la simulación del mapa del campus universitario debido a que al ser de gran extensión,  es muy probable que las personas tiendan a perderse. Por lo que se decidió que alguien debía de velar por todos esos problemas. Al dar la ubicación de los distintos edificios y un mapa detallado de estos, se ayuda al usuario en tiempo real y con un mayor grado de detalle (muy superior al de los mapas dados comúnmente por la institución).
 
 #####Modelo
 
