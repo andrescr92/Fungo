@@ -36,5 +36,20 @@ Es importante la simulación del mapa del campus universitario debido a que al s
 
 #####Modelo
 
+El proyecto será realizado mediante el método matemático de triangulación, el cual es utilizado por los GPS´S a partir del pisicionamiento de tres satélites con las distancias de ellas al punto buscado por el emisor.
 
+#####Agentes
 
+Serán simulados los diversos edificios, zonas verdes, se presentará la estrcutura exterior de os mismos mediante fotos. El usuario serpa representado por una imagen de un hongo en alución al nombre del proyecto.
+
+#####Controles
+
+Se empleará una interfaz gráfica de botones donde el usuario donde el usuario podrá interactuar con ella mediante la pantalla tácticl de su móvil.
+
+#####Salida
+
+Se brindarán 2 posibles tipos de visualización:
+1. Vista satelital con un mapa el cual recalca el recorrido del usuario.
+2. Vista en primera persona del recorrido.
+
+En ambos se podrá seleccionar el edificio con la posibilidad de obtener una imagen más concreta o información al respecto.
