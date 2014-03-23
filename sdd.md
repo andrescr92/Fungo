@@ -31,6 +31,59 @@
         Productos Similares:
         					 Como se mencionó anteriormente nuestro software se inspiró en la aplicación de geoposicinamiento global para dispostivos móviles llamada "Waze". Solamente que el producto está destinado únicamente para las instalaciones universitarias, de manera que estudiantes (tanto de nuevo ingreso como veteranos), profesores, personal administrativo, empleados y visitantes de esta institución puedan ubicarse fácilmente a través del recinto.
 
+==Como videojuego==
+
+#####Flujo del juego
+
+Una vez que el usuario ejecuta la aplicación Fungo podrá observar una estrella la cual representa diversos retos a los que este podría enfrentarse si así lo desea. Estos desafíos poseen gran importancia, ya que, es mediante ellos que el usario obtiene cierta cantidad de puntos que le permitiría adquirir beneficios y una prominente posición en el ranking de Fungo, dependiendo de la cantidad de puntos acumulados.
+Las característicias del juego son las siguientes:
+
+1. El juego como tal no tendrá una dificultad que incremente conforme el transcurso del mismo, sino que, el usuario es quien tiene la opción de elegir cual reto pretende alcanzar.
+2. La finalidad del juego consiste que que el usuario pueda ir ganando cierta cantidad de puntos para su cuenta, pues así podrá convertirse en un usuario privilegiado y por ende, poseer mayor impacto sobre los otros usuarios. Esto tiene relacion con una de las reglas que posee la aplicación, la cual es que solo podrán publicar en ella aquellos usuarios que tengan registrado cierta cantidad de puntos.
+3. Conforme el tiempo avanza y ciertos retos no hayan sido descifrados, su valor aumentará, es decir, el puntaje que ganaría la persona que logre conquistarlo será mayor.
+4. En el momento en que un usuario ha logrado ganar el reto, este lo evaluará para que pueda existir un flujo de retos, por lo que si un reto registra un puntaje menor o malo, podría desapecer.
+5. El juego pretende también incentivar la colaboración, de manera que, si cierta persona ayuda a otra para que pueda superar un reto determinado, entonces esta se verá beneficiada con una bonificación de puntos.
+
+#####Caracteres
+
+El juego será controlado principalmente por los usuarios de esta aplicación (estudiantes de la Universidad de Costa Rica, personal docente, administrativos y otros (as)). Cada uno de ellos se verá representado mediante una flecha o puntero, pero existe la posibilidad de elegir un avatar personalizable que lo identifique en el bloque de información del usuario. Para iniciar un desafío, el usuario debe aceptarlo y desplazarse por el mapa para poder conquistar dicho enigma; cabe destacar que el jugador siempre será el mismo. 
+
+#####Controles
+
+El usuario hará uso de los siguientes mecanismos para llevar a cabo la ejecución de la aplicación: 
+
+
+- El geoposicionamiento para desplazarse.
+- La pantalla para elegir las diversas opciones presentes en el juego. 
+- Sus manos o dedos, o los dedos y manos del asistente en caso de presentar una discapacidad (auditiva, motora, visual, etc.).
+- El teclado perteneciente a cada dispositivo, ya sea virtual o físico (dependerá del modelo y/o marca de cada uno).
+
+La aplicación consta de cuatro botones los cuales al ser seleccionados muestran diversos aspectos:
+
+++Estrella:++ expone una lista con los posibles retos a escoger.
+
+++Nombre:++ exhibe la información del usuario, por ejemplo:
+- Su nombre completo.
+- Número de carné.
+- Facultad o escuela a la que pertenece.
+- Avatar.
+
+++Nivel:++ despliega los usuarios mejor puntuados hasta ese momento.
+
+++Chat:++ abre el chat en un tamaño ideal para el buen uso de este.
+
+#####Gameplay
+
+Los retos van a encontrarse posicionados según su nivel de dificultad, el cual se incrementará o decrecerá de acuerdo a:
+
+- El tiempo en que ha estado vigente.
+- La calificación de los usuarios con respecto a este.
+
+Como se mencionó en el punto anterior, cada reto se encontrará posicionado según su nivel de dificultad, esto conlleva a que cada reto aumentará o reducirá el puntaje con el que se premiará a cada usuario.
+
+
+==Como simulador==
+
 #####Antecedentes
 
 Es importante la simulación del mapa del campus universitario debido a que al ser de gran extensión,  es muy probable que las personas tiendan a perderse. Por lo que se decidió que alguien debía de velar por todos esos problemas. Al dar la ubicación de los distintos edificios y un mapa detallado de estos, se ayuda al usuario en tiempo real y con un mayor grado de detalle (muy superior al de los mapas dados comúnmente por la institución).
