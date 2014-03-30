@@ -79,25 +79,8 @@ bool HelloWorld::init()
     this->addChild(sprite, 0);  
 	this->addChild(fungo, 0);
     
-	// animacion del hongo
-
-	CGPoint velocity = CGPointMake(0, 1); // Move up
-	CGPoint velocity = CGPointMake(0, -1); // Move down
-	CGPoint velocity = CGPointMake(1, 0); // Move right
-	CGPoint velocity = CGPointMake(-1, 0); // Move left 
-
-
-
-
-
-
-
-
-
     return true;
 }
-
-
 
 
 
