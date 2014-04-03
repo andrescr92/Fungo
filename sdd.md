@@ -53,9 +53,87 @@ Una vez que el usuario ejecuta la aplicación FunGo (como se puede observar en l
 
 5. El juego pretende también incentivar la colaboración, de manera que, si cierta persona ayuda a otra para que pueda superar un reto determinado, entonces esta se verá beneficiada con una bonificación de puntos.
 
+##### Posibles retos
+A continuación se presentarán algunos  retos que ejemplificaran claramente como sería la temática de estos en la aplicación:
+
+- Uno de estos podría ser buscar la casita de mate. Y hacer alguna pregunta relacionada con los objetos que se encuentra en esta y/o su apariencia.
+- Otro reto sería preguntar cuánto costaría un cuaderno de examen en "X" lugar (ya sea el kiosko, fotocopiadoras, etc…).
+- Otra opción podría ser la de optar por poner una especie de aviso (o cartel) en la pizarra de información de "X" escuela, este presentaría un tiempo límite para resolverlo.
+- Como último ejemplo se podría hacer un reto en el cuál se identifique la posición de alguna estatua, por ejemplo: las que están circundantes a la biblioteca Carlos Monge.
+
+##### Sistema de Rango
+
+Mostacilla..........0 pts<br>
+Humanizado..........500 pts<br>
+Enfiestado..........1000 pts<br>
+Palmado.............2500 pts<br>
+Bachiller...........5000 pts<br>
+Catedrático.........10000 pts
+
+Según el rango se podrá a acceder a distintas funcionalidades de la aplicación y al mismo tiempo este permite eliminar limitaciones de algunas funcionalidades. A continuación se presentarán los distintos rangos y sus beneficios: 
+
+Las personas que se encuentren en el nivel de mostacilla podrán: 
+
+- Aceptar los retos para las personas de primer ingreso.
+- Hacer uso del mapa universitario.
+- Utilizar el chat.
+- Mantener 2 retos activos al mismo tiempo.
+
+Mientras que los “humanizados(as)” podrán:
+- Aceptar los retos para las personas de primer ingreso.
+- Hacer uso del mapa universitario.
+- Utilizar el chat.
+- Publicar un reto mensual.
+- Otorgar asistencia a otras personas en sus retos.
+- Mantener 4 retos activos al mismo tiempo.
+
+Los(as) enfiestados(as) tendrán el privilegio de:
+
+- Aceptar los retos para las personas de primer ingreso.
+- Hacer uso del mapa universitario.
+- Utilizar el chat.
+- Publicar un reto mensual.
+- Otorgar asistencia a otras personas en sus retos.
+- La publicación de anuncios en el mapa universitario cada 12 horas.
+- Mantener 6 retos activos al mismo tiempo.
+
+El palmado cuenta con los permisos de:
+- Aceptar los retos para las personas de primer ingreso.
+- Hacer uso del mapa universitario.
+- Utilizar el chat.
+- Publicar un reto por quincena.
+- Otorgar asistencia a otras personas en sus retos.
+- La publicación de anuncios en el mapa universitario cada 6 horas.
+- Mantener 8 retos activos al mismo tiempo.
+
+Las(os) “Bachiller” podrán:
+- Aceptar los retos para las personas de primer ingreso.
+- Hacer uso del mapa universitario.
+- Utilizar el chat.
+- Publicar un reto por semanal.
+- Otorgar asistencia a otras personas en sus retos.
+- La publicación de anuncios en el mapa universitario cada 4 horas.
+- La posibilidad de moderar los anuncios y retos que se publican en la aplicación.
+- Recibir un bono extra de puntos al ayudar a otras personas con sus retos.
+- Mantener 10 retos activos al mismo tiempo.
+
+Los(as) “Catedráticos(as)”  serán capaces de:
+- Aceptar los retos para las personas de primer ingreso.
+- Hacer uso del mapa universitario.
+- Utilizar el chat.
+- Publicar un reto diario.
+- Otorgar asistencia a otras personas en sus retos.
+- La publicación de anuncios en el mapa universitario cada hora.
+- La posibilidad de moderar los anuncios y retos que se publican en la aplicación.
+- Recibir un bono extra de puntos al ayudar a otras personas con sus retos.
+- Mantener una cantidad ilimitada de retos activos al mismo tiempo.
+- Además su nombre aparecerá en la Salón de la Fama de FunGo.
+
 ## Caracteres
 
-El juego será controlado principalmente por los usuarios de esta aplicación (estudiantes de la Universidad de Costa Rica, personal docente, administrativos y otros (as)). Cada uno de ellos se verá representado mediante una flecha o puntero, pero existe la posibilidad de elegir un avatar personalizable que lo identifique en el bloque de información del usuario. Para iniciar un desafío, el usuario debe aceptarlo y desplazarse por el mapa para poder conquistar dicho enigma; cabe destacar que el jugador siempre será el mismo. <span style="background:red">¿Se le prohibirá iniciar un nuevo reto si tiene otro pendiente? o ¿cuántos retos puede adquirir de acuerdo a su "karma" (límite mostazilla = 1, ..., límite catedrático = 10)? ¿Cuánto es el castigo por abandonar un reto: la mitad de los puntos del reto?</span>
+El juego será controlado principalmente por los usuarios de esta aplicación (estudiantes de la Universidad de Costa Rica, personal docente, administrativos y otros (as)). Cada uno de ellos se verá representado mediante una flecha o puntero, pero existe la posibilidad de elegir un avatar personalizable que lo identifique en el bloque de información del usuario. Para iniciar un desafío, el usuario debe aceptarlo y desplazarse por el mapa para poder conquistar dicho enigma; cabe destacar que el jugador siempre será el mismo. Si la cola de retos está llena el usuario no podrá iniciar un reto hasta que cancele uno activo y/o cumpla con los que ya tiene. Y además si se canceló un reto, la persona verá reducido su puntaje según los puntos que este reto presentaba. Por ejemplo si un reto valía 10 puntos y este fue cancelado por el usuario el puntaje general del usuario bajará la misma cantidad de puntos que este presenta.
+
+<span style="background:red">¿Se le prohibirá iniciar un nuevo reto si tiene otro pendiente? o ¿cuántos retos puede adquirir de acuerdo a su "karma" (límite mostazilla = 1, ..., límite catedrático = 10)? ¿Cuánto es el castigo por abandonar un reto: la mitad de los puntos del reto?</span>
 
 ## Controles
 
