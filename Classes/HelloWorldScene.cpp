@@ -41,7 +41,7 @@ bool HelloWorld::init()
                                            CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
     
 	closeItem->setPosition(Point(origin.x + visibleSize.width - closeItem->getContentSize().width/2 ,
-                                origin.y + closeItem->getContentSize().height/2)); 
+                                origin.y + closeItem->getContentSize().height/2));
 
     // create menu, it's an autorelease object
     auto menu = Menu::create(closeItem, NULL);
@@ -54,7 +54,7 @@ bool HelloWorld::init()
     // add a label shows "Hello World"
     // create and initialize a label
     
-    auto label = LabelTTF::create("FUNGO", "SpikyBrush", 80); 
+    auto label = LabelTTF::create("Hello World", "Arial", 24);
     
     // position the label on the center of the screen
     label->setPosition(Point(origin.x + visibleSize.width/2,
@@ -64,29 +64,25 @@ bool HelloWorld::init()
     this->addChild(label, 1);
 
     // add "HelloWorld" splash screen"
-	auto sprite = Sprite::create("Logo v1.jpg");  
-	auto fungo = Sprite::create("funguito.png"); 
-	
+    auto sprite = Sprite::create("HelloWorld.png");
 
     // position the sprite on the center of the screen
-    sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));  
-	fungo->setPosition(Point(origin.x + visibleSize.width - fungo->getContentSize().width/2,
-		origin.y + fungo->getContentSize().height/2));
-	//fungo->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y)); 
-
+    sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
 
     // add the sprite as a child to this layer
-    this->addChild(sprite, 0);  
-	this->addChild(fungo, 0);
+    this->addChild(sprite, 0);
     
     return true;
 }
 
 
-
-
 void HelloWorld::menuCloseCallback(Ref* pSender)
 {
+#if (CC_TARGET_PLATFORM == CC_PLATFORM_WP8) || (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
+	MessageBox("You pressed the close button. Windows Store Apps do not implement a close button.","Alert");
+    return;
+#endif
+
     Director::getInstance()->end();
 
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_IOS)
