@@ -16,10 +16,13 @@ bool AppDelegate::applicationDidFinishLaunching() {
     auto director = Director::getInstance();
     auto glview = director->getOpenGLView();
     if(!glview) {
-        glview = GLView::create("My Game");
+        glview = GLView::create("FunGo!");
         director->setOpenGLView(glview);
     }
-
+	// Gráficos para 1024x 768
+	glview->setDesignResolutionSize(1024, 768, ResolutionPolicy::EXACT_FIT);
+	//Tamaño ventana
+	glview->setFrameSize(1024, 768);
     // turn on display FPS
     director->setDisplayStats(true);
 

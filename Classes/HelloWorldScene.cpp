@@ -1,4 +1,5 @@
 #include "HelloWorldScene.h"
+//#include <SimpleAudioEngine.h>
 
 USING_NS_CC;
 
@@ -36,8 +37,8 @@ bool HelloWorld::init()
 
     // add a "close" icon to exit the progress. it's an autorelease object
     auto closeItem = MenuItemImage::create(
-                                           "CloseNormal.png",
                                            "CloseSelected.png",
+                                           "CloseNormal.png",
                                            CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
     
 	closeItem->setPosition(Point(origin.x + visibleSize.width - closeItem->getContentSize().width/2 ,
@@ -54,8 +55,9 @@ bool HelloWorld::init()
     // add a label shows "Hello World"
     // create and initialize a label
     
-    auto label = LabelTTF::create("Hello World", "Arial", 24);
-    
+    auto label = LabelTTF::create("Mientras", "Arial", 24);
+	
+
     // position the label on the center of the screen
     label->setPosition(Point(origin.x + visibleSize.width/2,
                             origin.y + visibleSize.height - label->getContentSize().height));
@@ -64,18 +66,63 @@ bool HelloWorld::init()
     this->addChild(label, 1);
 
     // add "HelloWorld" splash screen"
-    auto sprite = Sprite::create("HelloWorld.png");
+    auto sprite = Sprite::create("Menu/fondo gris sin caja.png");
 
     // position the sprite on the center of the screen
     sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
 
     // add the sprite as a child to this layer
     this->addChild(sprite, 0);
-    
-    return true;
+
+	createGameTitle();
+	createGameMenu();
+
+   // auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
+	//sound->stopBackgroundMusic();
+	//sound->playBackgroundMusic("Musica/Fungo.mp3", true);
+    //return true;
+}
+
+void HelloWorld::createGameTitle()
+{
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+	Point origin = Director::getInstance()->getVisibleOrigin();
+	
+	//Muestra el sprite del logo en el centro de la pantalla
+	auto gameTitle = Sprite::create("Menu/logo3.png");
+	gameTitle->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height - gameTitle->getContentSize().height - 200.0f));
+	this->addChild(gameTitle, 0);
 }
 
 
+void HelloWorld::createGameMenu()
+{
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+	Point origin = Director::getInstance()->getVisibleOrigin(); 
+
+	//Boton Chat (mejorar comment)
+	auto buttonChat = MenuItemImage::create("Menu/chat1.png", "Menu/chat2.png"); //CC_CALLBACK_1(HelloWorld::startGame, this));
+	buttonChat->setPosition(Point(visibleSize.width * 0.11f , origin.y + visibleSize.height * 0.875f));
+    auto buttonChatMenu = Menu::create(buttonChat, NULL);
+    buttonChatMenu->setPosition(Point::ZERO);
+    this->addChild(buttonChatMenu, 2);
+	
+	
+	//Boton Retos (mejorar comment)
+	auto buttonRetos = MenuItemImage::create("Menu/estrella1.png", "Menu/estrella2.png"); //CC_CALLBACK_1(HelloWorld::startGame, this));
+	buttonRetos->setPosition(Point(visibleSize.width * 0.50f , origin.y + visibleSize.height * 0.875f));
+    auto buttonRetosMenu = Menu::create(buttonRetos, NULL);
+    buttonRetosMenu->setPosition(Point::ZERO);
+    this->addChild(buttonRetosMenu, 2); 
+
+	//Boton Usuario (mejorar comment)
+	auto buttonUsuario = MenuItemImage::create("Menu/usuario1.png", "Menu/usuario2.png"); //CC_CALLBACK_1(HelloWorld::startGame, this));
+	buttonUsuario->setPosition(Point(visibleSize.width * 0.88f , origin.y + visibleSize.height * 0.875f));
+    auto buttonUsuarioMenu = Menu::create(buttonUsuario, NULL);
+    buttonUsuarioMenu->setPosition(Point::ZERO);
+    this->addChild(buttonUsuarioMenu, 2);
+
+}
 void HelloWorld::menuCloseCallback(Ref* pSender)
 {
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_WP8) || (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)
