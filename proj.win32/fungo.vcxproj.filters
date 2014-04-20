@@ -24,8 +24,12 @@
     <ClCompile Include="..\Classes\ChatScene.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
-    <ClCompile Include="..\Classes\RetosScene.cpp" />
-    <ClCompile Include="..\Classes\UsuarioScene.cpp" />
+    <ClCompile Include="..\Classes\RetosScene.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\UsuarioScene.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -40,8 +44,12 @@
     <ClInclude Include="..\Classes\ChatScene.h">
       <Filter>Classes</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\RetosScene.h" />
-    <ClInclude Include="..\Classes\UsuarioScene.h" />
+    <ClInclude Include="..\Classes\UsuarioScene.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\RetosScene.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc">
