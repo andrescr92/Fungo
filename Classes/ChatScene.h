@@ -14,8 +14,12 @@ public:
     virtual bool init();  
     
 	//Al dar click se devuelve al menú principal
-	void return
-};
+	void returnMenuPrincipal (Ref* psender);
+
+private:
+
+
+}
 
 
 
