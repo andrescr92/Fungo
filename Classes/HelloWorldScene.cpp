@@ -101,7 +101,7 @@ void HelloWorld::createGameMenu()
 	Point origin = Director::getInstance()->getVisibleOrigin(); 
 
 	//Boton Chat (mejorar comment)
-	auto buttonChat = MenuItemImage::create("Menu/chat1.png", "Menu/chat2.png"); //CC_CALLBACK_1(HelloWorld::startGame, this));
+	auto buttonChat = MenuItemImage::create("Menu/chat1.png", "Menu/chat2.png", CC_CALLBACK_1(HelloWorld::showChat, this));
 	buttonChat->setPosition(Point(visibleSize.width * 0.11f , origin.y + visibleSize.height * 0.875f));
     auto buttonChatMenu = Menu::create(buttonChat, NULL);
     buttonChatMenu->setPosition(Point::ZERO);
@@ -109,20 +109,33 @@ void HelloWorld::createGameMenu()
 	
 	
 	//Boton Retos (mejorar comment)
-	auto buttonRetos = MenuItemImage::create("Menu/estrella1.png", "Menu/estrella2.png"); //CC_CALLBACK_1(HelloWorld::startGame, this));
+	auto buttonRetos = MenuItemImage::create("Menu/estrella1.png", "Menu/estrella2.png", CC_CALLBACK_1(HelloWorld::showRetos, this));
 	buttonRetos->setPosition(Point(visibleSize.width * 0.50f , origin.y + visibleSize.height * 0.875f));
     auto buttonRetosMenu = Menu::create(buttonRetos, NULL);
     buttonRetosMenu->setPosition(Point::ZERO);
     this->addChild(buttonRetosMenu, 2); 
 
 	//Boton Usuario (mejorar comment)
-	auto buttonUsuario = MenuItemImage::create("Menu/usuario1.png", "Menu/usuario2.png"); //CC_CALLBACK_1(HelloWorld::startGame, this));
+	auto buttonUsuario = MenuItemImage::create("Menu/usuario1.png", "Menu/usuario2.png", CC_CALLBACK_1(HelloWorld::showUsuario, this));
 	buttonUsuario->setPosition(Point(visibleSize.width * 0.88f , origin.y + visibleSize.height * 0.875f));
     auto buttonUsuarioMenu = Menu::create(buttonUsuario, NULL);
     buttonUsuarioMenu->setPosition(Point::ZERO);
     this->addChild(buttonUsuarioMenu, 2);
 
 }
+
+void HelloWorld::showChat(Ref * pSender)
+{
+}
+
+void HelloWorld::showRetos(Ref * pSender)
+{
+}
+
+void HelloWorld::showUsuario(Ref * pSender)
+{
+}
+
 void HelloWorld::menuCloseCallback(Ref* pSender)
 {
 #if (CC_TARGET_PLATFORM == CC_PLATFORM_WP8) || (CC_TARGET_PLATFORM == CC_PLATFORM_WINRT)

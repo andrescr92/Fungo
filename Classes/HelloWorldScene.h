@@ -16,11 +16,11 @@ public:
     void menuCloseCallback(cocos2d::Ref* pSender);
 
 	//Al hacer click en Botón Chat
-	void ShowChat (cocos2d::Ref* pSender);
+	void showChat (cocos2d::Ref* pSender);
 	//Al hacer click en Botón Retos 
-	void ShowRetos(cocos2d::Ref* pSender);
+	void showRetos(cocos2d::Ref* pSender);
 	//Al hacer click en Botón Usuario
-	void ShowUsuario(cocos2d::Ref* pSender);
+	void showUsuario(cocos2d::Ref* pSender);
 
 
 
