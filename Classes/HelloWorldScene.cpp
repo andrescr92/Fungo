@@ -1,5 +1,5 @@
 #include "HelloWorldScene.h"
-//#include <SimpleAudioEngine.h>
+#include <SimpleAudioEngine.h>
 
 USING_NS_CC;
 
@@ -37,8 +37,8 @@ bool HelloWorld::init()
 
     // add a "close" icon to exit the progress. it's an autorelease object
     auto closeItem = MenuItemImage::create(
-                                           "CloseSelected.png",
-                                           "CloseNormal.png",
+                                           "Menu/Home1.png",
+                                           "Menu/Home2.png",
                                            CC_CALLBACK_1(HelloWorld::menuCloseCallback, this));
     
 	closeItem->setPosition(Point(origin.x + visibleSize.width - closeItem->getContentSize().width/2 ,
@@ -77,10 +77,10 @@ bool HelloWorld::init()
 	createGameTitle();
 	createGameMenu();
 
-   // auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
-	//sound->stopBackgroundMusic();
-	//sound->playBackgroundMusic("Musica/Fungo.mp3", true);
-    //return true;
+   auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
+	sound->stopBackgroundMusic();
+	sound->playBackgroundMusic("Musica/Fungo.mp3", true);
+    return true;
 }
 
 void HelloWorld::createGameTitle()
