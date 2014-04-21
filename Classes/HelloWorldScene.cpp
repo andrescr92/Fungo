@@ -141,10 +141,11 @@ void HelloWorld::showRetos(Ref * pSender)
 	Director::getInstance()->replaceScene(CCTransitionSlideInR::create(0.75f, newScene));
 }
 
+#include "UsuarioScene.h"
 void HelloWorld::showUsuario(Ref * pSender)
 {
-
-
+	auto newScene = UsuarioScene::createScene();
+	Director::getInstance()->replaceScene(CCTransitionSlideInR::create(0.75f, newScene));
 }
 
 void HelloWorld::menuCloseCallback(Ref* pSender)
