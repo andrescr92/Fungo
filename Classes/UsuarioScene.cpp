@@ -62,7 +62,7 @@ bool UsuarioScene::init()
 	// ilustrativos
 	auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
 	sound->stopBackgroundMusic();
-	sound->playBackgroundMusic("MindBlow.mp3", true);
+	sound->playBackgroundMusic("Musica/MindBlow.mp3", true);
 
     return true;
 }

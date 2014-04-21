@@ -56,7 +56,7 @@ bool RetosScene::init()
 	// Se reproduce la música en la escena de Retos. 
 	auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
 	sound->stopBackgroundMusic();
-	sound->playBackgroundMusic("Music/Retos.mp3", true);
+	sound->playBackgroundMusic("Musica/Retos.mp3", true);
 
     return true;
 }
