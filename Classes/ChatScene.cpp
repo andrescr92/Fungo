@@ -89,7 +89,7 @@ void ChatScene::returnGameMenu(Ref * pSender)
 {
 
 	auto newScene = HelloWorld::createScene();
-	Director::getInstance()->replaceScene(CCTransitionSlideInL::create(0.75f, newScene)); 
+	Director::getInstance()->replaceScene(CCTransitionCrossFade::create(0.75f, newScene)); 
 
 }
 
