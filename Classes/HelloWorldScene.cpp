@@ -98,7 +98,7 @@ void HelloWorld::createGameTitle()
 
 	// Hacer una animacion con el titulo del juego cambiando su imagen (textura) en el tiempo
 	auto animation = Animation::create();
-	for ( int i = 0; i < 5; ++i )
+	for ( int i = 1; i < 5; ++i )
 		animation->addSpriteFrameWithFile( String::createWithFormat("Menu/logo%i.png", i)->getCString() );
 	
 	
