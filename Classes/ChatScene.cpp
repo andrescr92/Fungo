@@ -1,4 +1,6 @@
 #include "ChatScene.h"
+#include <SimpleAudioEngine.h>
+
 
 USING_NS_CC;
 
@@ -58,7 +60,9 @@ bool ChatScene::init()
 
 	createMenu();
 
-	
+	auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
+	sound->stopBackgroundMusic();
+	sound->playBackgroundMusic("Musica/Oda a Fungo.mp3", true);
 	
 	return true;
 }
