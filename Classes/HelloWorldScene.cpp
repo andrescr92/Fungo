@@ -90,9 +90,26 @@ void HelloWorld::createGameTitle()
 	Point origin = Director::getInstance()->getVisibleOrigin();
 	
 	//Muestra el sprite del logo en el centro de la pantalla
-	auto gameTitle = Sprite::create("Menu/logo3.png");
+	auto gameTitle = Sprite::create("Menu/logo.png");
 	gameTitle->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height - gameTitle->getContentSize().height - 200.0f));
 	this->addChild(gameTitle, 0);
+
+
+
+	// Hacer una animacion con el titulo del juego cambiando su imagen (textura) en el tiempo
+	auto animation = Animation::create();
+	for ( int i = 0; i < 5; ++i )
+		animation->addSpriteFrameWithFile( String::createWithFormat("Menu/logo%i.png", i)->getCString() );
+	
+	
+	
+	// Indicarle que muestre cada una de las imagenes que la componen por 0.1333 segundos
+	animation->setDelayPerUnit( 0.1333f );
+	
+	// Lo anterior construye una unica animacion, repetirla siempre y cuando la pantalla de
+	// menu del juego este visible
+	auto repeatAnimation = RepeatForever::create( Animate::create(animation) );
+	gameTitle->runAction(repeatAnimation);
 }
 
 
@@ -131,21 +148,21 @@ void HelloWorld::createGameMenu()
 void HelloWorld::showChat(Ref * pSender)
 {
 	auto newScene = ChatScene::createScene();
-	Director::getInstance()->replaceScene(CCTransitionSlideInR::create(0.75f, newScene));
+	Director::getInstance()->replaceScene(CCTransitionCrossFade::create(0.75f, newScene));
 }
 
 #include "RetosScene.h"
 void HelloWorld::showRetos(Ref * pSender)
 { 
 	auto newScene = RetosScene::createScene();
-	Director::getInstance()->replaceScene(CCTransitionSlideInR::create(0.75f, newScene));
+	Director::getInstance()->replaceScene(CCTransitionRotoZoom::create(0.75f, newScene));
 }
 
 #include "UsuarioScene.h"
 void HelloWorld::showUsuario(Ref * pSender)
 {
 	auto newScene = UsuarioScene::createScene();
-	Director::getInstance()->replaceScene(CCTransitionSlideInR::create(0.75f, newScene));
+	Director::getInstance()->replaceScene(CCTransitionCrossFade::create(0.75f, newScene));
 }
 
 void HelloWorld::menuCloseCallback(Ref* pSender)
