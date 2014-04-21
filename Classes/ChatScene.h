@@ -14,12 +14,17 @@ public:
     virtual bool init();  
     
 	//Al dar click se devuelve al menú principal
-	void returnMenuPrincipal (Ref* psender);
+	void returnGameMenu (cocos2d::Ref* pSender);
+
+	// implement the "static create()" method manually
+    CREATE_FUNC(ChatScene);
 
 private:
 
+	//Crea el "menú", es decir los distintos botones y opciones que se encuentran en esta escena
+	void createMenu();
 
-}
+};
 
 
 

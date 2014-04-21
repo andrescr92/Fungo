@@ -1,5 +1,6 @@
 #include "HelloWorldScene.h"
-#include <SimpleAudioEngine.h>
+
+//#include <SimpleAudioEngine.h>
 
 USING_NS_CC;
 
@@ -77,10 +78,10 @@ bool HelloWorld::init()
 	createGameTitle();
 	createGameMenu();
 
-   auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
+   /*auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
 	sound->stopBackgroundMusic();
 	sound->playBackgroundMusic("Musica/Fungo.mp3", true);
-    return true;
+    return true;*/
 }
 
 void HelloWorld::createGameTitle()
@@ -124,8 +125,12 @@ void HelloWorld::createGameMenu()
 
 }
 
+#include "ChatScene.h"
+
 void HelloWorld::showChat(Ref * pSender)
 {
+	auto newScene = ChatScene::createScene();
+	Director::getInstance()->replaceScene(CCTransitionSlideInR::create(0.75f, newScene));
 }
 
 void HelloWorld::showRetos(Ref * pSender)
@@ -134,6 +139,8 @@ void HelloWorld::showRetos(Ref * pSender)
 
 void HelloWorld::showUsuario(Ref * pSender)
 {
+
+
 }
 
 void HelloWorld::menuCloseCallback(Ref* pSender)
