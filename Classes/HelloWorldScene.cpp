@@ -96,7 +96,7 @@ void HelloWorld::createGameTitle()
 
 
 
-	// Hacer una animacion con el titulo del juego cambiando su imagen (textura) en el tiempo
+	/* Hacer una animacion con el titulo del juego cambiando su imagen (textura) en el tiempo
 	auto animation = Animation::create();
 	for ( int i = 0; i < 5; ++i )
 		animation->addSpriteFrameWithFile( String::createWithFormat("Menu/logo%i.png", i)->getCString() );
@@ -109,7 +109,7 @@ void HelloWorld::createGameTitle()
 	// Lo anterior construye una unica animacion, repetirla siempre y cuando la pantalla de
 	// menu del juego este visible
 	auto repeatAnimation = RepeatForever::create( Animate::create(animation) );
-	gameTitle->runAction(repeatAnimation);
+	gameTitle->runAction(repeatAnimation);*/
 }
 
 
