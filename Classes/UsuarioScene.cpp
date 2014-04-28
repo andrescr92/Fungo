@@ -36,7 +36,8 @@ bool UsuarioScene::init()
 
     // add a label shows "Hello World"
     // create and initialize a label
-
+	
+	///Se define el formato que presentara el texto en el menú.
     auto label = LabelTTF::create("Usuario", "Arial", 24);
 
     // position the label on the center of the screen
@@ -46,7 +47,7 @@ bool UsuarioScene::init()
     // add the label as a child to this layer
     this->addChild(label, 1);
 
-    // Crear el fondo del menu del juego
+    ///Añade el fondo a la escena de la pantalla de usuario.
     auto sprite = Sprite::create("Menu/fondo.png");
 
     // position the sprite on the center of the screen
@@ -56,10 +57,8 @@ bool UsuarioScene::init()
     this->addChild(sprite, 0);
 	
 	createMenu();
-    
-	// Reproducir la musica de la seleccion del nivel: quiza sea mejor dejar la misma del menu
-	// principal y cambiarla cuando se haya iniciado el nivel. Se deja aqui por propositos
-	// ilustrativos
+    ///Se agrega la música de fondo para esta escena.
+	///Canción inspirada en la frase "Kleopatra yendo al cielo".
 	auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
 	sound->stopBackgroundMusic();
 	sound->playBackgroundMusic("Musica/MindBlow.mp3", true);
@@ -67,12 +66,13 @@ bool UsuarioScene::init()
     return true;
 }
 
+///Se construyen y posicionan en la escena los diferentes botones.
 void UsuarioScene::createMenu()
 {
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
 
-	// Boton de la casita, para retornar al menu del juego, ubicado en la esquina superior izquierda
+	///Botón úbicado en la esquina inferior derecha para regresar al menú principal.
 	auto buttonHome = MenuItemImage::create("Menu/home1.png", "Menu/home2.png", CC_CALLBACK_1(UsuarioScene::returnGameMenu, this));
 	buttonHome->setPosition(Point(visibleSize.width * 0.100f , origin.y + visibleSize.height * 0.875f));
     auto buttonHomeMenu = Menu::create(buttonHome, NULL);
@@ -81,6 +81,7 @@ void UsuarioScene::createMenu()
 }
 
 #include "HelloWorldScene.h"
+///Reemplaza la escena del usuario por la del menú principal.
 void UsuarioScene::returnGameMenu(Ref* pSender)
 {
 	auto newScene = HelloWorld::createScene();
