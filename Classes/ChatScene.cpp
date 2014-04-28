@@ -49,7 +49,7 @@ bool ChatScene::init()
     // add the label as a child to this layer
     this->addChild(label, 1);
 
-    // Añade el fondo al menú de chat
+    /// Añade el fondo al menú de chat
     auto sprite = Sprite::create("Menu/fondo.png");
 
     // position the sprite on the center of the screen
@@ -59,7 +59,7 @@ bool ChatScene::init()
     this->addChild(sprite, 0);
 
 	createMenu();
-
+	///Añade la música a la escena de chat
 	auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
 	sound->stopBackgroundMusic();
 	sound->playBackgroundMusic("Musica/Oda a Fungo.mp3", true);
@@ -67,13 +67,14 @@ bool ChatScene::init()
 	return true;
 }
 
+///Crea y posiciona los distintos botones pertenecientes al menú. 
 void ChatScene::createMenu()
 {
 
 	Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
 
-	//Añade el botón de regresar al menú principal
+	///Añade el botón de regresar al menú principal.
 	auto buttonHome = MenuItemImage::create("Menu/home1.png", "Menu/home2.png", 
 												CC_CALLBACK_1(ChatScene::returnGameMenu, this));
 	buttonHome->setPosition(Point(visibleSize.width * 0.100f , origin.y + visibleSize.height * 0.875f));
@@ -85,6 +86,7 @@ void ChatScene::createMenu()
 
 
 #include "HelloWorldScene.h"
+///Reemplaza la escena del chat por la del menú principal.
 void ChatScene::returnGameMenu(Ref * pSender)
 {
 
