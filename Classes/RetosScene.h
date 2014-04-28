@@ -3,6 +3,7 @@
 
 #include "cocos2d.h" 
 
+/// Se crea la escena de retos donde se encontrarán los diversos desafíos que el usuario podrá enfrentar.
 class RetosScene: public cocos2d::Layer
 {
 public:
