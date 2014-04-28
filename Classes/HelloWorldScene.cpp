@@ -98,7 +98,7 @@ void HelloWorld::createGameTitle()
 
 	/* Hacer una animacion con el titulo del juego cambiando su imagen (textura) en el tiempo
 	auto animation = Animation::create();
-	for ( int i = 0; i < 5; ++i )
+	for ( int i = 1; i < 5; ++i )
 		animation->addSpriteFrameWithFile( String::createWithFormat("Menu/logo%i.png", i)->getCString() );
 	
 	
@@ -112,13 +112,13 @@ void HelloWorld::createGameTitle()
 	gameTitle->runAction(repeatAnimation);*/
 }
 
-
+///Crea y posiciona los distintos botones pertenecientes al menú. Cada botón lleva al usuario a una nueva escena.
 void HelloWorld::createGameMenu()
 {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin(); 
 
-	//Boton Chat (mejorar comment)
+	///Boton que dirige a la escena perteneciente al chat
 	auto buttonChat = MenuItemImage::create("Menu/chat1.png", "Menu/chat2.png", CC_CALLBACK_1(HelloWorld::showChat, this));
 	buttonChat->setPosition(Point(visibleSize.width * 0.11f , origin.y + visibleSize.height * 0.875f));
     auto buttonChatMenu = Menu::create(buttonChat, NULL);
@@ -126,14 +126,14 @@ void HelloWorld::createGameMenu()
     this->addChild(buttonChatMenu, 2);
 	
 	
-	//Boton Retos (mejorar comment)
+	///Boton que dirige a la escena perteneciente a la escena de retos.
 	auto buttonRetos = MenuItemImage::create("Menu/estrella1.png", "Menu/estrella2.png", CC_CALLBACK_1(HelloWorld::showRetos, this));
 	buttonRetos->setPosition(Point(visibleSize.width * 0.50f , origin.y + visibleSize.height * 0.875f));
     auto buttonRetosMenu = Menu::create(buttonRetos, NULL);
     buttonRetosMenu->setPosition(Point::ZERO);
     this->addChild(buttonRetosMenu, 2); 
 
-	//Boton Usuario (mejorar comment)
+	///Boton que dirige a la escena perteneciente a la escena de usuario.
 	auto buttonUsuario = MenuItemImage::create("Menu/usuario1.png", "Menu/usuario2.png", CC_CALLBACK_1(HelloWorld::showUsuario, this));
 	buttonUsuario->setPosition(Point(visibleSize.width * 0.88f , origin.y + visibleSize.height * 0.875f));
     auto buttonUsuarioMenu = Menu::create(buttonUsuario, NULL);
@@ -144,7 +144,7 @@ void HelloWorld::createGameMenu()
 
 
 #include "ChatScene.h" 
-
+///Cambia la escena del menú principal por la escena correspondiente, en este caso es la escena de chat.
 void HelloWorld::showChat(Ref * pSender)
 {
 	auto newScene = ChatScene::createScene();
@@ -152,6 +152,7 @@ void HelloWorld::showChat(Ref * pSender)
 }
 
 #include "RetosScene.h"
+///Cambia la escena del menú principal por la escena correspondiente, en este caso es la escena de retos.
 void HelloWorld::showRetos(Ref * pSender)
 { 
 	auto newScene = RetosScene::createScene();
@@ -159,6 +160,7 @@ void HelloWorld::showRetos(Ref * pSender)
 }
 
 #include "UsuarioScene.h"
+///Cambia la escena del menú principal por la escena correspondiente, en este caso es la escena de usuario.
 void HelloWorld::showUsuario(Ref * pSender)
 {
 	auto newScene = UsuarioScene::createScene();
