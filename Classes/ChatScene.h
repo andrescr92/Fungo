@@ -21,7 +21,7 @@ public:
 
 private:
 
-	///Crea la función "menú", es decir los distintos botones y opciones que se encuentran en esta escena
+	///Crea la función "menú", es decir los distintos botones y opciones que se encuentran en esta escena.
 	void createMenu();
 
 };

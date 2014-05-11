@@ -42,7 +42,7 @@ bool RetosScene::init()
     // add the label as a child to this layer
     this->addChild(label, 1);
 
-    // Se crea el fondo del menú del juego
+    /// Se crea el fondo del menú del juego
     auto sprite = Sprite::create("Menu/fondo.png");
 
     // position the sprite on the center of the screen
@@ -53,20 +53,21 @@ bool RetosScene::init()
 	
 	createMenu();
     
-	// Se reproduce la música en la escena de Retos. 
+	/// Se agrega la música correspondiente a la escena de Retos. 
 	auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
 	sound->stopBackgroundMusic();
 	sound->playBackgroundMusic("Musica/Retos.mp3", true);
 
     return true;
 }
-	 
+	
+/// Se crea el menú de retos con sus botones necesarios.
 void RetosScene::createMenu()
 {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
-	//Se utiliza el botón del hongo para retornar al menú principal. 
+	///Se crea el botón del hongo para retornar al menú principal. 
 	auto buttonHome = MenuItemImage::create("Menu/Home1.png", "Menu/Home2.png", CC_CALLBACK_1(RetosScene::returnGameMenu, this));
 	buttonHome->setPosition(Point(visibleSize.width * 0.11f , origin.y + visibleSize.height * 0.875f));
     auto buttonHomeMenu = Menu::create(buttonHome, NULL);
@@ -75,7 +76,8 @@ void RetosScene::createMenu()
 }
 
 
-#include "HelloWorldScene.h"
+#include "HelloWorldScene.h" 
+///La escena de retos es reemplazada por la escena del menú principal con la transición: CrossFade
 void RetosScene::returnGameMenu(Ref* pSender)
 {
 	auto newScene = HelloWorld::createScene();

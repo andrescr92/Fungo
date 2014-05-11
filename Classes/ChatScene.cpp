@@ -1,7 +1,6 @@
 #include "ChatScene.h"
 #include <SimpleAudioEngine.h>
 
-
 USING_NS_CC;
 
 Scene* ChatScene:: createScene()
