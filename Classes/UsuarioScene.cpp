@@ -73,7 +73,7 @@ void UsuarioScene::createMenu()
     Point origin = Director::getInstance()->getVisibleOrigin();
 
 	///Botón úbicado en la esquina inferior derecha para regresar al menú principal.
-	auto buttonHome = MenuItemImage::create("Menu/home1.png", "Menu/home2.png", CC_CALLBACK_1(UsuarioScene::returnGameMenu, this));
+	auto buttonHome = MenuItemImage::create("home1.png", "home2.png", CC_CALLBACK_1(UsuarioScene::returnGameMenu, this));
 	buttonHome->setPosition(Point(visibleSize.width * 0.100f , origin.y + visibleSize.height * 0.875f));
     auto buttonHomeMenu = Menu::create(buttonHome, NULL);
     buttonHomeMenu->setPosition(Point::ZERO);

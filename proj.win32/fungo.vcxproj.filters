@@ -44,10 +44,10 @@
     <ClInclude Include="..\Classes\ChatScene.h">
       <Filter>Classes</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\UsuarioScene.h">
+    <ClInclude Include="..\Classes\RetosScene.h">
       <Filter>Classes</Filter>
     </ClInclude>
-    <ClInclude Include="..\Classes\RetosScene.h">
+    <ClInclude Include="..\Classes\UsuarioScene.h">
       <Filter>Classes</Filter>
     </ClInclude>
   </ItemGroup>
