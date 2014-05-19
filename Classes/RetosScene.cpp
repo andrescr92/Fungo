@@ -68,7 +68,7 @@ void RetosScene::createMenu()
 	Point origin = Director::getInstance()->getVisibleOrigin();
 
 	///Se crea el botón del hongo para retornar al menú principal. 
-	auto buttonHome = MenuItemImage::create("Home1.png", "Home2.png", CC_CALLBACK_1(RetosScene::returnGameMenu, this));
+	auto buttonHome = MenuItemImage::create("home1.png", "home2.png", CC_CALLBACK_1(RetosScene::returnGameMenu, this));
 	buttonHome->setPosition(Point(visibleSize.width * 0.11f , origin.y + visibleSize.height * 0.875f));
     auto buttonHomeMenu = Menu::create(buttonHome, NULL);
     buttonHomeMenu->setPosition(Point::ZERO);
