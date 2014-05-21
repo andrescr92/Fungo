@@ -30,6 +30,10 @@
     <ClCompile Include="..\Classes\UsuarioScene.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\CreateMap.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Classes\CreateMap.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -50,6 +54,10 @@
     <ClInclude Include="..\Classes\UsuarioScene.h">
       <Filter>Classes</Filter>
     </ClInclude>
+    <ClInclude Include="..\Classes\CreateMap.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\CreateMap.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc">

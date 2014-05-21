@@ -1,4 +1,5 @@
 #include "HelloWorldScene.h"
+#include "CreateMap.h"
 
 #include <SimpleAudioEngine.h>
 
@@ -31,6 +32,8 @@ bool HelloWorld::init()
     
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
+	CreateMap* Mapa = new CreateMap;
+	
 
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program
@@ -48,7 +51,7 @@ bool HelloWorld::init()
     // create menu, it's an autorelease object
     auto menu = Menu::create(closeItem, NULL);
     menu->setPosition(Point::ZERO);
-    this->addChild(menu, 1);
+    this->addChild(menu, 2);
 
     /////////////////////////////
     // 3. add your codes below...
@@ -62,16 +65,20 @@ bool HelloWorld::init()
     this->addChild(Sprite1, 1);
 
     // add "HelloWorld" splash screen"
-    auto sprite = Sprite::create("Menu/fondo.png");
+    //auto sprite = Sprite::create("mapa.png");
 
     // position the sprite on the center of the screen
-    sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+    //sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
 
-    // add the sprite as a child to this layer
-    this->addChild(sprite, 0);
+	//add the sprite as a child to this layer
+    //this->addChild(sprite, 0);
 
 	createGameTitle();
 	createGameMenu();
+	this->addChild(Mapa);
+	Mapa->crearMapa();
+	
+	
 
    auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
 	sound->stopBackgroundMusic();
@@ -115,7 +122,7 @@ void HelloWorld::createGameMenu()
 
 	///Boton que dirige a la escena perteneciente al chat
 	auto buttonChat = MenuItemImage::create("Menu/chat1.png", "Menu/chat2.png", CC_CALLBACK_1(HelloWorld::showChat, this));
-	buttonChat->setPosition(Point(visibleSize.width * 0.11f , origin.y + visibleSize.height * 0.875f));
+	buttonChat->setPosition(Point(visibleSize.width * 0.11f , origin.y + visibleSize.height * 0.900f));
     auto buttonChatMenu = Menu::create(buttonChat, NULL);
     buttonChatMenu->setPosition(Point::ZERO);
     this->addChild(buttonChatMenu, 2);
@@ -123,14 +130,14 @@ void HelloWorld::createGameMenu()
 	
 	///Boton que dirige a la escena perteneciente a la escena de retos.
 	auto buttonRetos = MenuItemImage::create("Menu/estrella1.png", "Menu/estrella2.png", CC_CALLBACK_1(HelloWorld::showRetos, this));
-	buttonRetos->setPosition(Point(visibleSize.width * 0.50f , origin.y + visibleSize.height * 0.875f));
+	buttonRetos->setPosition(Point(visibleSize.width * 0.50f , origin.y + visibleSize.height * 0.900f));
     auto buttonRetosMenu = Menu::create(buttonRetos, NULL);
     buttonRetosMenu->setPosition(Point::ZERO);
     this->addChild(buttonRetosMenu, 2); 
 
 	///Boton que dirige a la escena perteneciente a la escena de usuario.
 	auto buttonUsuario = MenuItemImage::create("Menu/usuario1.png", "Menu/usuario2.png", CC_CALLBACK_1(HelloWorld::showUsuario, this));
-	buttonUsuario->setPosition(Point(visibleSize.width * 0.88f , origin.y + visibleSize.height * 0.875f));
+	buttonUsuario->setPosition(Point(visibleSize.width * 0.88f , origin.y + visibleSize.height * 0.900f));
     auto buttonUsuarioMenu = Menu::create(buttonUsuario, NULL);
     buttonUsuarioMenu->setPosition(Point::ZERO);
     this->addChild(buttonUsuarioMenu, 2);
