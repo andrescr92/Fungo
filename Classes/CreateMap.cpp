@@ -4,6 +4,7 @@
 USING_NS_CC;
 
 
+
 void CreateMap::crearMapa()
 {
 
@@ -18,36 +19,67 @@ void CreateMap::crearMapa()
 
 }
 
-/*void CreateMap::createMap()
+void CreateMap::createMap()
 {
-	// create a TMX map
-    TMXTiledMap *map = TMXTiledMap::create("TileMaps/mapa.tmx");
-
-    addChild(map, 0, kTagTileMap);
-
-    // All the tiles by default will be aliased. If you want to create anti-alias tiles, you should do:
-
-    // iterate over all the "layers" (atlas sprite managers)
-
-    // and set them as 'antialias' 
-
-    Array * pChildrenArray = map->getChildren();
-
-    SpriteBatchNode* child = NULL;
-
-    Ref* pObject = NULL;
-
-    CCARRAY_FOREACH(pChildrenArray, pObject)
-    {
-            child = (CCSpriteBatchNode*)pObject;
-
-            if(!child)
-                break;
-
-            child->getTexture()->setAntiAliasTexParameters();
-    }
 
 	
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+	Point origin = Director::getInstance()->getVisibleOrigin();
 
-}*/
+	this-> Map = CCTMXTiledMap::create("TiledMaps/mapa6.tmx");
+	addChild(Map, 0);
+	//Map->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
+	
+	
+}
 
+
+
+void CreateMap::moveMap()
+{ 
+	Node* Mapita = Map; 
+
+	//Create a "one by one" touch event listener (processes one touch at a time)
+    auto listener1 = EventListenerTouchOneByOne::create();
+    // When "swallow touches" is true, then returning 'true' from the onTouchBegan method will "swallow" the touch event, preventing other listeners from using it.
+    listener1->setSwallowTouches(true);
+
+    // Example of using a lambda expression to implement onTouchBegan event callback function
+    listener1->onTouchBegan = [](Touch* touch, Event* event){
+        // event->getCurrentTarget() returns the *listener's* sceneGraphPriority node.
+        auto target = static_cast<Node*>(event->getCurrentTarget());
+
+        //Get the position of the current point relative to the button
+        Point locationInNode = target->convertToNodeSpace(touch->getLocation());
+        Size s = target->getContentSize();
+        Rect rect = Rect(0, 0, s.width, s.height);
+
+        //Check the click area
+        if (rect.containsPoint(locationInNode))
+        {
+            log("node began... x = %f, y = %f", locationInNode.x, locationInNode.y);
+            target->setOpacity(180);
+            return true;
+        }
+        return false;
+    };
+
+    //Trigger when moving touch
+    listener1->onTouchMoved = [](Touch* touch, Event* event){
+        auto target = static_cast<Node*>(event->getCurrentTarget());
+        //Move the position of current button sprite
+        target->setPosition(target->getPosition() + touch->getDelta());
+    };
+
+    //Process the touch end event
+    listener1->onTouchEnded = [=](Touch* touch, Event* event){
+        auto target = static_cast<Node*>(event->getCurrentTarget());
+        log("node onTouchesEnded.. ");
+        target->setOpacity(255);
+     
+        
+    };
+
+		_eventDispatcher->addEventListenerWithSceneGraphPriority(listener1, Mapita);
+
+}

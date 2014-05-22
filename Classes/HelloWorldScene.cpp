@@ -32,8 +32,10 @@ bool HelloWorld::init()
     
     Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
-	CreateMap* Mapa = new CreateMap;
+
+		CreateMap* Mapa= new CreateMap; 
 	
+
 
     /////////////////////////////
     // 2. add a menu item with "X" image, which is clicked to quit the program
@@ -75,9 +77,11 @@ bool HelloWorld::init()
 
 	createGameTitle();
 	createGameMenu();
+	//this->addChild(Mapa);
+	//Mapa->crearMapa();
 	this->addChild(Mapa);
-	Mapa->crearMapa();
-	
+	Mapa->createMap();
+	Mapa->moveMap(); 
 	
 
    auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
@@ -168,6 +172,13 @@ void HelloWorld::showUsuario(Ref * pSender)
 	auto newScene = UsuarioScene::createScene();
 	Director::getInstance()->replaceScene(CCTransitionCrossFade::create(0.75f, newScene));
 }
+
+/*void HelloWorld::moveMap()
+{
+	
+	Mapa->moveMap();
+
+}*/
 
 void HelloWorld::menuCloseCallback(Ref* pSender)
 {

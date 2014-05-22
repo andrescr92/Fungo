@@ -12,6 +12,7 @@ LOCAL_SRC_FILES := hellocpp/main.cpp \
 					../../Classes/RetosScene.cpp \
 					../../Classes/UsuarioScene.cpp \
 					../../Classes/ChatScene.cpp \
+					../../Classes/CreateMap.cpp \
 
 LOCAL_C_INCLUDES := $(LOCAL_PATH)/../../Classes
 
