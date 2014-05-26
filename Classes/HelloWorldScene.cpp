@@ -34,7 +34,7 @@ bool HelloWorld::init()
     Point origin = Director::getInstance()->getVisibleOrigin();
 
 		CreateMap* Mapa= new CreateMap; 
-	
+		CreateMap* Boton= new CreateMap; 
 
 
     /////////////////////////////
@@ -79,9 +79,13 @@ bool HelloWorld::init()
 	createGameMenu();
 	//this->addChild(Mapa);
 	//Mapa->crearMapa();
-	this->addChild(Mapa);
 	Mapa->createMap();
 	Mapa->moveMap(); 
+	Mapa->sizeMap();
+	this->addChild(Mapa);
+	
+	
+	
 	
 
    auto sound = CocosDenshion::SimpleAudioEngine::getInstance();

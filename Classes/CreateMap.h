@@ -15,7 +15,6 @@ class CreateMap: public cocos2d::Layer
 
 private:
     cocos2d::CCTMXTiledMap *Map;
-    //cocos2d::CCTMXLayer *_background;
 
 public:
 	///Método que crea el mapa, es decir lo inicializa como un layer.
@@ -25,8 +24,10 @@ public:
 	void moveMap();
 	///Método que permite el escalamiento del mapa (cambio de tamaños)
 	void sizeMap();
-	//void sliderEvent();
 
+	void increaseSize(cocos2d::Ref* pSender);
+
+	void decreaseSize(cocos2d::Ref* pSender);
 	CREATE_FUNC(CreateMap);
 };
 

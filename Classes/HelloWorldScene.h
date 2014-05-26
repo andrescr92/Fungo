@@ -37,8 +37,7 @@ private:
 	void createGameTitle();
 	//Se crea el menú del juego con los siguientes botones: Chat, Retos, Usuario
 	void createGameMenu();
-	cocos2d::CCTMXTiledMap *_tileMap;
-    cocos2d::CCTMXLayer *_background;
+
 
 };
 

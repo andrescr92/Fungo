@@ -1,14 +1,10 @@
 #include "CreateMap.h"
-#include "HelloWorldScene.h"
-
-//#include "renderer/CCRenderer.h"
-//#include "ui/CocosGUI.h"
-//#include "UISlider.h"
+#include "HelloWorldScene.h" 
 
 
 
 USING_NS_CC;
-//using namespace ui;
+
 
 
 
@@ -29,16 +25,18 @@ USING_NS_CC;
 
 void CreateMap::createMap()
 {
-
+	
 	
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 	//Crea el nodo mapa
-	this-> Map = CCTMXTiledMap::create("TiledMaps/mapa6.tmx");
+	this-> Map = CCTMXTiledMap::create("TiledMaps/mapag.tmx");
+	Map->setScaleX(0.25f);
+	Map->setScaleY(0.25f);
 	//Añade el mapa a la escena en la capa "0"
 	addChild(Map, 0);
-	//Map->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-	
+	//Map->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y)); 
+
 	
 }
 
@@ -93,29 +91,63 @@ void CreateMap::moveMap()
 
 }
 
-/*void CreateMap::sizeMap()
+void CreateMap::sizeMap()
 {
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+    Point origin = Director::getInstance()->getVisibleOrigin();
+	
+	auto buttonPlus = MenuItemImage::create("Menu/boton_mas.png", "Menu/boton_mas1.png", CC_CALLBACK_1(CreateMap::increaseSize, this));
+	buttonPlus->setPosition(Point(visibleSize.width * 0.035f , origin.y + visibleSize.height * 0.500f));
+	buttonPlus->setScaleX(0.70f);
+	buttonPlus->setScaleY(0.70f);
+    auto buttonPlusMenu = Menu::create(buttonPlus, NULL);
+    buttonPlusMenu->setPosition(Point::ZERO);
+    this->addChild(buttonPlusMenu, 2);
 
-	auto size = Director::getInstance()->getWinSize();
-	cocos2d::UISlider* slider = cocos2d::UISlider::create();
-	slider->setTag(1);
-	slider->setTouchEnabled(true);
-	slider->loadBarTexture("sliderTrack.png");
-	slider->loadSlidBallTextures("sliderThumb.png", "sliderThumb.png", "");
-	slider->loadProgressBarTexture("sliderProgress.png");
-	slider->setPosition(Point(size.width / 2.0f, size.height * 0.15f + slider->getSize().height * 2.0f));
-	slider->setPercent(50);
-	//slider->addEventListenerSlider(this, sliderpercentchangedselector(CreateMap::sliderEvent));
-	addChild(slider);
+
+	auto buttonMinus = MenuItemImage::create("Menu/boton_menos.png", "Menu/boton_menos1.png", CC_CALLBACK_1(CreateMap::decreaseSize, this));
+	buttonMinus->setPosition(Point(visibleSize.width * 0.035f , origin.y + visibleSize.height * 0.350f));
+    buttonMinus->setScaleX(0.70f);
+	buttonMinus->setScaleY(0.70f);
+	auto buttonMinusMenu = Menu::create(buttonMinus, NULL);
+    buttonMinusMenu->setPosition(Point::ZERO);
+    this->addChild(buttonMinusMenu, 2);
 
 
 
 }
 
-void CreateMap::sliderEvent(){
+void CreateMap::increaseSize(Ref * pSender)
+{
+
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+    Point origin = Director::getInstance()->getVisibleOrigin();
 
 
+		Node* Mapa= Map;
+       
+
+	if (Mapa->getScaleX() < 1.0f && Mapa->getScaleY() < 1.0f){
+		Mapa->setScaleX (Mapa->getScaleX()+0.05f);
+			Mapa->setScaleY (Mapa->getScaleY()+0.05f);
+				 
+	}
 
 
+}
+ 
+void CreateMap::decreaseSize(Ref * pSender)
+{
 
-}*/
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+    Point origin = Director::getInstance()->getVisibleOrigin();
+	Node* Mapa= Map;
+
+	if (Mapa->getScaleX() > 0.25f && Mapa->getScaleY() > 0.25f){
+		Mapa->setScaleX (Mapa->getScaleX()-0.05f);
+			Mapa->setScaleY (Mapa->getScaleY()-0.05f);
+	}
+
+
+}
+
