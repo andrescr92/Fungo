@@ -34,6 +34,8 @@
       <Filter>Classes</Filter>
     </ClCompile>
     <ClCompile Include="..\Classes\CreateMap.cpp" />
+    <ClCompile Include="..\Classes\Etiquetas.cpp" />
+    <ClCompile Include="..\Classes\Etiqueta.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -58,6 +60,8 @@
       <Filter>Classes</Filter>
     </ClInclude>
     <ClInclude Include="..\Classes\CreateMap.h" />
+    <ClInclude Include="..\Classes\Etiquetas.h" />
+    <ClInclude Include="..\Classes\Etiqueta.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc">

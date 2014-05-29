@@ -135,6 +135,8 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="..\Classes\ChatScene.cpp" />
+    <ClCompile Include="..\Classes\Etiqueta.cpp" />
+    <ClCompile Include="..\Classes\Etiquetas.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
     <ClCompile Include="..\Classes\CreateMap.cpp" />
     <ClCompile Include="..\Classes\RetosScene.cpp" />
@@ -144,6 +146,8 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\ChatScene.h" />
+    <ClInclude Include="..\Classes\Etiqueta.h" />
+    <ClInclude Include="..\Classes\Etiquetas.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
     <ClInclude Include="..\Classes\CreateMap.h" />
     <ClInclude Include="..\Classes\RetosScene.h" />

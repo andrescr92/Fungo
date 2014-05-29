@@ -52,18 +52,18 @@ void CreateMap::createMap()
 	Map->addChild(etiqueta);
     //addChild(etiqueta);
 
-	 auto label = LabelTTF::create("Odontologia", "Arial",45);
+	 auto label = LabelTTF::create("Derecho", "Arial",45);
 	 label->setColor(ccc3(0,0,0));
 	 label->setAnchorPoint(Point(-0.44, -0.58));
 	 label->setPosition(Point(0, 0));
-	 etiqueta->addChild(label);
+	 etiqueta->addChild(label); 
 
+	  
 
-
-	 auto etiqueta1 = Sprite::create("etiquetapequena.png");
+	 /*auto etiqueta1 = Sprite::create("etiquetapequena.png");
 	 etiqueta1->setAnchorPoint(Point(0,0));
 	
-	 etiqueta1->setPosition(Point(3000, 2500));
+	 etiqueta1->setPosition(Point(1500, 1500));
 	 Map->addChild(etiqueta1);
 	
 
@@ -79,8 +79,7 @@ void CreateMap::createMap()
 
 	Sprite* etiqueta2 = Sprite::create("etiquetamediana.png");
 	etiqueta2->setAnchorPoint(Point(0,0));
-	etiqueta2->setPosition(Point(origin.x + visibleSize.width/2,
-                            origin.y + visibleSize.height - etiqueta2->getContentSize().height-200.f));
+	etiqueta2->setPosition(Point());
 	Map->addChild(etiqueta2);
 
 
@@ -89,7 +88,7 @@ void CreateMap::createMap()
 	 label2->setAnchorPoint(Point(-0.44, -0.58));
 	 label2->setPosition(Point(0, 0));
 	 etiqueta2->addChild(label2);
-
+	 */
 
 
 	
@@ -183,6 +182,7 @@ void CreateMap::increaseSize(Ref * pSender)
        
 
 	if (Mapa->getScaleX() < 1.0f && Mapa->getScaleY() < 1.0f){
+		
 		Mapa->setScaleX (Mapa->getScaleX()+0.05f);
 			Mapa->setScaleY (Mapa->getScaleY()+0.05f);
 				 
