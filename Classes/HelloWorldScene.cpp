@@ -88,6 +88,13 @@ bool HelloWorld::init()
 	
 	
 
+
+
+
+
+
+	
+
    auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
 	sound->stopBackgroundMusic();
 	sound->playBackgroundMusic("Musica/Fungo.mp3", true);
