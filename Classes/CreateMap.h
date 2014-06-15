@@ -3,6 +3,7 @@
 #define CreateMap_h
 
 #include "cocos2d.h"
+#include <vector> 
 
 
 /*#include "renderer/CCCustomCommand.h"
@@ -13,7 +14,7 @@ class CreateMap: public cocos2d::Layer
 {
 	friend class HelloWorldScene;
 
-private:
+public:
     cocos2d::CCTMXTiledMap *Map;
 
 public:

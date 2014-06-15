@@ -1,24 +1,25 @@
 #ifndef Etiquetas_h
 #define Etiquetas_h 
-#include 
-#include <vector>
 
-class Etiquetas
+#include "cocos2d.h"
+#include <vector> 
+#include "CreateMap.h"
+
+
+class Etiquetas: public CreateMap 
 {  
+		
 	public: 
-
-	cocos2d:: LabelTTF Texto; 
 	int Coordx; 
 	int Coordy; 
 
 protected: 
 
-	std::vector<Etiquetas*> Etiquetas;
+	//std::vector<Etiquetas*> Etiquetas;
 
 public:
-	
-}
+	void createLabel();
+};
 
 #endif
-;
 

@@ -23,10 +23,9 @@ USING_NS_CC;
 
 }*/
 
-void CreateMap::createMap()
+ void CreateMap::createMap()  
 {
-	
-	
+   
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 	//Crea el nodo mapa
@@ -34,65 +33,22 @@ void CreateMap::createMap()
 	Map->setScaleX(0.25f);
 	Map->setScaleY(0.25f);
 	//Añade el mapa a la escena en la capa "0"
-	addChild(Map, 0);
+	addChild(Map, 0); 
 
+/*	 
+	/* for(size_t i = 0; i < 40; ++i)
+	{
+		Etiquetas[i] = Sprite::create("etiquetamediana.png");  
+		Etiquetas[i]->setPosition(Point(1500,1100));
+		Map->addChild(Etiquetas[i]);
+		//Etiquetas[i]->texto = LabelTTF::create("Derecho", "Arial",35); 
+		//texto->setColor(ccc3(0,0,0)); 
+		//texto->setPosition(Point(0, 0));
+		//etiqueta->addChild(texto); 
+	} */
 
-
-
-
-
-	
-
-	Sprite* etiqueta = Sprite::create("etiquetagrande.png");
-	
-	etiqueta->setAnchorPoint(Point(0,0));
-	etiqueta->setPosition(Point(origin.x + visibleSize.width/2,
-                            origin.y + visibleSize.height - etiqueta->getContentSize().height-150.f));
-	//etiqueta->setScale(1.50f, 1.50f);
-	Map->addChild(etiqueta);
-    //addChild(etiqueta);
-
-	 auto label = LabelTTF::create("Derecho", "Arial",45);
-	 label->setColor(ccc3(0,0,0));
-	 label->setAnchorPoint(Point(-0.44, -0.58));
-	 label->setPosition(Point(0, 0));
-	 etiqueta->addChild(label); 
-
-	  
-
-	 /*auto etiqueta1 = Sprite::create("etiquetapequena.png");
-	 etiqueta1->setAnchorPoint(Point(0,0));
-	
-	 etiqueta1->setPosition(Point(1500, 1500));
-	 Map->addChild(etiqueta1);
-	
-
-	 auto label1 = LabelTTF::create("ingenieria", "Helvetica", 17);
-	 label1->setColor(ccc3(0,0,0));
-	 label1->setAnchorPoint(Point(-0.50, -0.27));
-	 label1->setPosition(Point(0, 0));
-	 etiqueta1->addChild(label1);
-
-
-
-
-
-	Sprite* etiqueta2 = Sprite::create("etiquetamediana.png");
-	etiqueta2->setAnchorPoint(Point(0,0));
-	etiqueta2->setPosition(Point());
-	Map->addChild(etiqueta2);
-
-
-	 auto label2 = LabelTTF::create("Odontologia", "Arial",35);
-	 label2->setColor(ccc3(0,0,0));
-	 label2->setAnchorPoint(Point(-0.44, -0.58));
-	 label2->setPosition(Point(0, 0));
-	 etiqueta2->addChild(label2);
-	 */
-
-
-	
 }
+
 
 
 //Encargado de mover al mapa (desplazarlo)

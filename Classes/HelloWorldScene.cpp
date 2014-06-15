@@ -1,5 +1,6 @@
 #include "HelloWorldScene.h"
 #include "CreateMap.h"
+#include "Etiquetas.h"
 
 #include <SimpleAudioEngine.h>
 
@@ -34,7 +35,8 @@ bool HelloWorld::init()
     Point origin = Director::getInstance()->getVisibleOrigin();
 
 		CreateMap* Mapa= new CreateMap; 
-		CreateMap* Boton= new CreateMap; 
+		Etiquetas* label = new Etiquetas;  
+
 
 
     /////////////////////////////
@@ -77,12 +79,15 @@ bool HelloWorld::init()
 
 	createGameTitle();
 	createGameMenu();
-	//this->addChild(Mapa);
-	//Mapa->crearMapa();
-	Mapa->createMap();
-	Mapa->moveMap(); 
-	Mapa->sizeMap();
-	this->addChild(Mapa);
+	label->createLabel(); 
+	label->moveMap(); 
+	label->sizeMap();  
+	this->addChild(label);
+	
+//	Mapa->createMap();
+//	Mapa->moveMap(); 
+//	Mapa->sizeMap();
+//	this->addChild(Mapa);
 	
 	
 	
