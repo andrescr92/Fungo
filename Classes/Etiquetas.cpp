@@ -92,7 +92,7 @@ Sprite* etiqueta = Sprite::create("etiquetamediana.png");
 
 	Sprite* etiqueta6 = Sprite::create("etiquetamediana.png");
 	etiqueta6->setAnchorPoint(Point(0,0));
-	etiqueta6->setPosition(Point(2200,1700)); 
+	etiqueta6->setPosition(Point(2300,1700)); 
 	etiqueta6->setScale(1.20f, 1.20f);
 	Map->addChild(etiqueta6);
     //addChild(etiqueta);
@@ -210,7 +210,7 @@ Sprite* etiqueta = Sprite::create("etiquetamediana.png");
 
 	Sprite* etiqueta15 = Sprite::create("etiquetamediana.png");
 	etiqueta15->setAnchorPoint(Point(0,0));
-	etiqueta15->setPosition(Point(500,1320));
+	etiqueta15->setPosition(Point(500,1300));
 	etiqueta15->setScale(1.20f, 1.20f);
 	Map->addChild(etiqueta15);
 
@@ -269,4 +269,79 @@ Sprite* etiqueta = Sprite::create("etiquetamediana.png");
 	 label19->setPosition(Point(0, 0));
 	 etiqueta19->addChild(label19); 
 
+	 Sprite* etiqueta20 = Sprite::create("etiquetamediana.png");
+	etiqueta20->setAnchorPoint(Point(0,0));
+	etiqueta20->setPosition(Point(1600,2500));
+	etiqueta20->setScale(1.20f, 1.20f);
+	Map->addChild(etiqueta20);
+
+	 auto label20 = LabelTTF::create("Informatica","Arial",35);
+	 label20->setColor(ccc3(0,0,0));
+	 label20->setAnchorPoint(Point(-0.50, -0.58));
+	 label20->setPosition(Point(0, 0));
+	 etiqueta20->addChild(label20); 
+
+	  Sprite* etiqueta21 = Sprite::create("etiquetamediana.png");
+	etiqueta21->setAnchorPoint(Point(0,0));
+	etiqueta21->setPosition(Point(1400,2700));
+	etiqueta21->setScale(1.20f, 1.20f);
+	Map->addChild(etiqueta21);
+
+	 auto label21 = LabelTTF::create("Geologia","Arial",35);
+	 label21->setColor(ccc3(0,0,0));
+	 label21->setAnchorPoint(Point(-0.65, -0.58));
+	 label21->setPosition(Point(0, 0));
+	 etiqueta21->addChild(label21); 
+
+	 Sprite* etiqueta22 = Sprite::create("etiquetamediana.png");
+	etiqueta22->setAnchorPoint(Point(0,0));
+	etiqueta22->setPosition(Point(2100,3030)); 
+	etiqueta22->setScale(1.20f, 1.20f);
+	Map->addChild(etiqueta22);
+ 
+
+	auto label22 = LabelTTF::create("Medicina", "Arial",35);
+	label22->setColor(ccc3(0,0,0));
+    label22->setAnchorPoint(Point(-0.70, -0.58));
+	label22->setPosition(Point(0, 0));
+	etiqueta22->addChild(label22);  
+
+	 Sprite* etiqueta23 = Sprite::create("etiquetamediana.png");
+	etiqueta23->setAnchorPoint(Point(0,0));
+	etiqueta23->setPosition(Point(2550,3150)); 
+	etiqueta23->setScale(1.20f, 1.20f);
+	Map->addChild(etiqueta23);
+ 
+
+	auto label23 = LabelTTF::create("Farmacia", "Arial",35);
+	label23->setColor(ccc3(0,0,0));
+    label23->setAnchorPoint(Point(-0.70, -0.58));
+	label23->setPosition(Point(0, 0));
+	etiqueta23->addChild(label23); 
+
+	Sprite* etiqueta24 = Sprite::create("etiquetamediana.png");
+	etiqueta24->setAnchorPoint(Point(0,0));
+	etiqueta24->setPosition(Point(2900,2700)); 
+	etiqueta24->setScale(1.20f, 1.20f);
+	Map->addChild(etiqueta24);
+ 
+
+	auto label24 = LabelTTF::create("Microbiologia", "Arial",35);
+	label24->setColor(ccc3(0,0,0));
+    label24->setAnchorPoint(Point(-0.40, -0.58));
+	label24->setPosition(Point(0, 0));
+	etiqueta24->addChild(label24); 
+
+	Sprite* etiqueta25 = Sprite::create("etiquetamediana.png"); 
+	etiqueta25->setAnchorPoint(Point(0,0));
+	etiqueta25->setPosition(Point(1780,1850)); 
+	etiqueta25->setScale(1.20f, 1.20f);
+	Map->addChild(etiqueta25);
+
+
+	auto label25 = LabelTTF::create("Fisica", "Arial",35);
+	label25->setColor(ccc3(0,0,0));
+    label25->setAnchorPoint(Point(-0.90, -0.58));
+	label25->setPosition(Point(0, 0));
+	etiqueta25->addChild(label25); 
 }
