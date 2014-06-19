@@ -1,5 +1,6 @@
 #include "CreateMap.h"
 #include "HelloWorldScene.h" 
+#include "Etiquetas.h"
 
 
 
@@ -105,7 +106,6 @@ void CreateMap::sizeMap()
 {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
-	
 	auto buttonPlus = MenuItemImage::create("Menu/boton_mas.png", "Menu/boton_mas1.png", CC_CALLBACK_1(CreateMap::increaseSize, this));
 	buttonPlus->setPosition(Point(visibleSize.width * 0.035f , origin.y + visibleSize.height * 0.500f));
 	buttonPlus->setScaleX(0.70f);
@@ -129,12 +129,18 @@ void CreateMap::sizeMap()
 
 void CreateMap::increaseSize(Ref * pSender)
 {
-
 	Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
 
 
 		Node* Mapa= Map;
+
+	  //Node* createWithArray( Map->getChildren());
+
+
+
+	//	std::vector<Node*> zoom;  
+//	zoom = Map->getChildren;
        
 
 	if (Mapa->getScaleX() < 1.0f && Mapa->getScaleY() < 1.0f){
@@ -153,11 +159,28 @@ void CreateMap::decreaseSize(Ref * pSender)
 	Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
 	Node* Mapa= Map;
-
+	size_t count;
+	//int temporal;
+	count= Map->getChildrenCount();
 	if (Mapa->getScaleX() > 0.25f && Mapa->getScaleY() > 0.25f){
 		Mapa->setScaleX (Mapa->getScaleX()-0.05f);
-			Mapa->setScaleY (Mapa->getScaleY()-0.05f);
+			Mapa->setScaleY (Mapa->getScaleY()-0.05f); 
+			Map->getChildren(); 
+			//++temporal;
+				//for(size_t i = 0; i <count ; ++i ) 
+				//{  
+					//Mapa->getChildByTag(i) = this->setScaleX(Mapa->getScaleX()-0.05f); 
+					//zoom[i] = Mapa->getChildren[i]->setScaley(Mapa->getScaleY()-0.05f); 
+			//	} 			
+	
 	}
+
+	
+}
+void CreateMap::procedures()
+{
+	//Etiquetas* label = new Etiquetas;
+	//label->sizeMap(); 
 
 
 }

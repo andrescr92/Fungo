@@ -8,17 +8,29 @@
 
 class Etiquetas: public CreateMap 
 {  
+		//Sprite* objeto;
+		//Label* texto;
+
+
+	/* public:
+		Etiquetas()
+			:objeto
+			,texto
+		{} 
+	*/
 		
-	public: 
+		
 	int Coordx; 
 	int Coordy; 
 
+
 protected: 
 
-	//std::vector<Etiquetas*> Etiquetas;
+	//std::vector<Etiquetas*> Etiquetas; 
 
 public:
 	void createLabel();
+	void setNewLabels(int a);
 };
 
 #endif

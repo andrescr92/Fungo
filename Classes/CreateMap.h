@@ -29,6 +29,8 @@ public:
 	void increaseSize(cocos2d::Ref* pSender);
 
 	void decreaseSize(cocos2d::Ref* pSender);
+
+	void procedures();
 	CREATE_FUNC(CreateMap);
 };
 
