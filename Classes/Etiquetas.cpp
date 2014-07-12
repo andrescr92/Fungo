@@ -347,7 +347,7 @@ Sprite* etiqueta = Sprite::create("facu.png");
 	etiqueta25->addChild(label25); 
 
 
-		Sprite* etiqueta26 = Sprite::create("punto.png"); 
+	Sprite* etiqueta26 = Sprite::create("punto.png"); 
 	etiqueta26->setAnchorPoint(Point(0,0));
 	etiqueta26->setPosition(Point(1770,1780)); 
 	etiqueta26->setScale(0.90f, 0.90f);
@@ -359,8 +359,125 @@ Sprite* etiqueta = Sprite::create("facu.png");
     label26->setAnchorPoint(Point(-0.20, 0.0));
 	label26->setPosition(Point(0, 0));
 	etiqueta26->addChild(label26);
+
+	Sprite* etiqueta27 = Sprite::create("inves.png");
+	etiqueta27->setAnchorPoint(Point(0,0));
+	etiqueta27->setPosition(Point(2800,2950)); 
+	etiqueta27->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta27);
+ 
+
+	auto label27 = LabelTTF::create("Inv. Sociales", "Arial",35);
+	label27->setColor(ccc3(0,0,0));
+    label27->setAnchorPoint(Point(-0.20, 0.0));
+	label27->setPosition(Point(0, 0));
+	etiqueta27->addChild(label27); 
+
 	
+	Sprite* etiqueta28 = Sprite::create("facu.png");
+	etiqueta28->setAnchorPoint(Point(0,0));
+	etiqueta28->setPosition(Point(2850,2450)); 
+	etiqueta28->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta28);
+ 
+
+	auto label28 = LabelTTF::create("Biologia", "Arial",35);
+	label28->setColor(ccc3(0,0,0));
+    label28->setAnchorPoint(Point(-0.40, 0.0));
+	label28->setPosition(Point(0, 0));
+	etiqueta28->addChild(label28); 
+	
+	Sprite* etiqueta29 = Sprite::create("facu.png");
+	etiqueta29->setAnchorPoint(Point(0,0));
+	etiqueta29->setPosition(Point(3350,3300)); 
+	etiqueta29->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta29);
+ 
+
+	auto label29 = LabelTTF::create("Agronomia", "Arial",35);
+	label29->setColor(ccc3(0,0,0));
+    label29->setAnchorPoint(Point(-0.30, 0.0));
+	label29->setPosition(Point(0, 0));
+	etiqueta29->addChild(label29);
+
+	Sprite* etiqueta30 = Sprite::create("facu.png");
+	etiqueta30->setAnchorPoint(Point(0,0));
+	etiqueta30->setPosition(Point(3280,3400)); 
+	etiqueta30->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta30);
+ 
+
+	auto label30 = LabelTTF::create("Zootecnia", "Arial",35);
+	label30->setColor(ccc3(0,0,0));
+    label30->setAnchorPoint(Point(-0.30, 0.0));
+	label30->setPosition(Point(0, 0));
+	etiqueta30->addChild(label30); 
+
+	Sprite* etiqueta31 = Sprite::create("inves.png");
+	etiqueta31->setAnchorPoint(Point(0,0));
+	etiqueta31->setPosition(Point(3220,3620)); 
+	etiqueta31->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta31);
+ 
+
+	auto label31 = LabelTTF::create("CIGRAS", "Arial",35);
+	label31->setColor(ccc3(0,0,0));
+    label31->setAnchorPoint(Point(-0.30, 0.0));
+	label31->setPosition(Point(0, 0));
+	etiqueta31->addChild(label31); 
+
+	Sprite* etiqueta32 = Sprite::create("inves.png");
+	etiqueta32->setAnchorPoint(Point(0,0));
+	etiqueta32->setPosition(Point(3100,3900)); 
+	etiqueta32->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta32);
+ 
+
+	auto label32 = LabelTTF::create("CITA", "Arial",35);
+	label32->setColor(ccc3(0,0,0));
+    label32->setAnchorPoint(Point(-0.50, 0.0));
+	label32->setPosition(Point(0, 0));
+	etiqueta32->addChild(label32); 
+
+	Sprite* etiqueta33 = Sprite::create("facu.png");
+	etiqueta33->setAnchorPoint(Point(0,0));
+	etiqueta33->setPosition(Point(3400,3840)); 
+	etiqueta33->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta33);
+ 
+
+	auto label33 = LabelTTF::create("Tec. de Alimentos", "Arial",35);
+	label33->setColor(ccc3(0,0,0));
+    label33->setAnchorPoint(Point(-0.16, 0.0));
+	label33->setPosition(Point(0, 0));
+	etiqueta33->addChild(label33); 
+
+	Sprite* etiqueta34 = Sprite::create("inves.png");
+	etiqueta34->setAnchorPoint(Point(0,0));
+	etiqueta34->setPosition(Point(3620,3750)); 
+	etiqueta34->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta34);
+ 
+
+	auto label34 = LabelTTF::create("CIGRAS", "Arial",35);
+	label34->setColor(ccc3(0,0,0));
+    label34->setAnchorPoint(Point(-0.30, 0.0));
+	label34->setPosition(Point(0, 0));
+	etiqueta34->addChild(label34); 
+
+	Sprite* etiqueta35 = Sprite::create("clulle.png");
+	etiqueta35->setAnchorPoint(Point(0,0));
+	etiqueta35->setPosition(Point(3410,2340));
+	etiqueta35->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta35);
+
+	auto label35 = LabelTTF::create("Sala Cullell", "Arial",35);
+	label35->setColor(ccc3(0,0,0));
+	label35->setAnchorPoint(Point(-0.33, 0.0));
+	label35->setPosition(Point(0, 0));
+	etiqueta35->addChild(label35);
 }
+
 
 void  Etiquetas::setNewLabels(int a) {
 
