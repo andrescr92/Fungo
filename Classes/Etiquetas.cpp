@@ -478,7 +478,200 @@ Sprite* etiqueta = Sprite::create("facu.png");
 	label35->setPosition(Point(0, 0));
 	etiqueta35->addChild(label35);
 
+	Sprite* etiqueta36 = Sprite::create("biblio.png"); 
+	etiqueta36->setAnchorPoint(Point(0,0));
+	etiqueta36->setPosition(Point(1200,1600)); 
+	etiqueta36->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta36);
 
+
+	auto label36 = LabelTTF::create("Tinoco", "Arial",35);
+	label36->setColor(ccc3(0,0,0));
+    label36->setAnchorPoint(Point(-0.40, 0.0));
+	label36->setPosition(Point(0, 0));
+	etiqueta36->addChild(label36); 
+
+	Sprite* etiqueta37 = Sprite::create("ofi.png"); 
+	etiqueta37->setAnchorPoint(Point(0,0));
+	etiqueta37->setPosition(Point(800,1150)); 
+	etiqueta37->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta37);
+
+
+	auto label37 = LabelTTF::create("OEPI", "Arial",35);
+	label37->setColor(ccc3(0,0,0));
+    label37->setAnchorPoint(Point(-0.40, 0.0));
+	label37->setPosition(Point(0, 0));
+	etiqueta37->addChild(label37); 
+
+	Sprite* etiqueta38 = Sprite::create("anfi.png"); 
+	etiqueta38->setAnchorPoint(Point(0,0));
+	etiqueta38->setPosition(Point(900,1050)); 
+	etiqueta38->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta38);
+
+
+	auto label38 = LabelTTF::create("Av", "Arial",35);
+	label38->setColor(ccc3(0,0,0));
+    label38->setAnchorPoint(Point(-0.80, 0.0));
+	label38->setPosition(Point(0, 0));
+	etiqueta38->addChild(label38); 
+
+	Sprite* etiqueta39 = Sprite::create("inves.png"); 
+	etiqueta39->setAnchorPoint(Point(0,0));
+	etiqueta39->setPosition(Point(1325,1150)); 
+	etiqueta39->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta39);
+
+
+	auto label39 = LabelTTF::create("IIP, CIHAC", "Arial",35);
+	label39->setColor(ccc3(0,0,0));
+    label39->setAnchorPoint(Point(-0.20, 0.0));
+	label39->setPosition(Point(0, 0));
+	etiqueta39->addChild(label39);
+
+	Sprite* etiqueta40 = Sprite::create("clinic.png"); 
+	etiqueta40->setAnchorPoint(Point(0,0));
+	etiqueta40->setPosition(Point(1325,1025)); 
+	etiqueta40->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta40);
+
+
+	auto label40 = LabelTTF::create("Clinica(OBS)", "Arial",35);
+	label40->setColor(ccc3(0,0,0));
+    label40->setAnchorPoint(Point(-0.20, 0.0));
+	label40->setPosition(Point(0, 0));
+	etiqueta40->addChild(label40);
+
+	Sprite* etiqueta41 = Sprite::create("facu.png"); 
+	etiqueta41->setAnchorPoint(Point(0,0));
+	etiqueta41->setPosition(Point(1100,875)); 
+	etiqueta41->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta41);
+
+
+	auto label41 = LabelTTF::create("Enfermeria", "Arial",35);
+	label41->setColor(ccc3(0,0,0));
+    label41->setAnchorPoint(Point(-0.20, 0.0));
+	label41->setPosition(Point(0, 0));
+	etiqueta41->addChild(label41);
+
+	Sprite* etiqueta42 = Sprite::create("facu.png"); 
+	etiqueta42->setAnchorPoint(Point(0,0));
+	etiqueta42->setPosition(Point(1400,800)); 
+	etiqueta42->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta42);
+
+
+	auto label42 = LabelTTF::create("Art.Dramaticas", "Arial",35);
+	label42->setColor(ccc3(0,0,0));
+    label42->setAnchorPoint(Point(-0.20, 0.0));
+	label42->setPosition(Point(0, 0));
+	etiqueta42->addChild(label42);
+
+	Sprite* etiqueta43 = Sprite::create("tv.png"); 
+	etiqueta43->setAnchorPoint(Point(0,0));
+	etiqueta43->setPosition(Point(1490,725)); 
+	etiqueta43->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta43);
+
+
+	auto label43 = LabelTTF::create("Canal 15", "Arial",35);
+	label43->setColor(ccc3(0,0,0));
+    label43->setAnchorPoint(Point(-0.30, 0.0));
+	label43->setPosition(Point(0, 0));
+	etiqueta43->addChild(label43);
+
+	Sprite* etiqueta44 = Sprite::create("radio.png"); 
+	etiqueta44->setAnchorPoint(Point(0,0));
+	etiqueta44->setPosition(Point(1600,900)); 
+	etiqueta44->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta44);
+
+
+	auto label44 = LabelTTF::create("Radio UCR", "Arial",35);
+	label44->setColor(ccc3(0,0,0));
+    label44->setAnchorPoint(Point(-0.20, 0.0));
+	label44->setPosition(Point(0, 0));
+	etiqueta44->addChild(label44);
+
+	Sprite* etiqueta45 = Sprite::create("caje.png"); 
+	etiqueta45->setAnchorPoint(Point(0,0));
+	etiqueta45->setPosition(Point(850,775)); 
+	etiqueta45->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta45);
+
+
+	auto label45 = LabelTTF::create("Cajeros/JAP", "Arial",35);
+	label45->setColor(ccc3(0,0,0));
+    label45->setAnchorPoint(Point(-0.20, 0.0));
+	label45->setPosition(Point(0, 0));
+	etiqueta45->addChild(label45);
+
+	Sprite* etiqueta46 = Sprite::create("ofi.png"); 
+	etiqueta46->setAnchorPoint(Point(0,0));
+	etiqueta46->setPosition(Point(1125,700)); 
+	etiqueta46->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta46);
+
+
+	auto label46 = LabelTTF::create("CASED", "Arial",35);
+	label46->setColor(ccc3(0,0,0));
+    label46->setAnchorPoint(Point(-0.30, 0.0));
+	label46->setPosition(Point(0, 0));
+	etiqueta46->addChild(label46);
+
+	Sprite* etiqueta47 = Sprite::create("sindi.png"); 
+	etiqueta47->setAnchorPoint(Point(0,0));
+	etiqueta47->setPosition(Point(1325,630)); 
+	etiqueta47->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta47);
+
+
+	auto label47 = LabelTTF::create("SINDEU", "Arial",35);
+	label47->setColor(ccc3(0,0,0));
+    label47->setAnchorPoint(Point(-0.30, 0.0));
+	label47->setPosition(Point(0, 0));
+	etiqueta47->addChild(label47);
+
+	Sprite* etiqueta48 = Sprite::create("ofi.png"); 
+	etiqueta48->setAnchorPoint(Point(0,0));
+	etiqueta48->setPosition(Point(900,400)); 
+	etiqueta48->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta48);
+
+
+	auto label48 = LabelTTF::create("C.C.Poblacion", "Arial",35);
+	label48->setColor(ccc3(0,0,0));
+    label48->setAnchorPoint(Point(-0.15, 0.0));
+	label48->setPosition(Point(0, 0));
+	etiqueta48->addChild(label48);
+
+	Sprite* etiqueta49 = Sprite::create("ofi.png"); 
+	etiqueta49->setAnchorPoint(Point(0,0));
+	etiqueta49->setPosition(Point(850,250)); 
+	etiqueta49->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta49);
+
+
+	auto label49 = LabelTTF::create("CCA", "Arial",35);
+	label49->setColor(ccc3(0,0,0));
+    label49->setAnchorPoint(Point(-0.45, 0.0));
+	label49->setPosition(Point(0, 0));
+	etiqueta49->addChild(label49);
+
+	Sprite* etiqueta50 = Sprite::create("ofi.png"); 
+	etiqueta50->setAnchorPoint(Point(0,0));
+	etiqueta50->setPosition(Point(1025,170)); 
+	etiqueta50->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta50);
+
+
+	auto label50 = LabelTTF::create("Of.Juridica", "Arial",35);
+	label50->setColor(ccc3(0,0,0));
+    label50->setAnchorPoint(Point(-0.20, 0.0));
+	label50->setPosition(Point(0, 0));
+	etiqueta50->addChild(label50);
 
 		Sprite* etiqueta52 = Sprite::create("pc.png");
 	etiqueta52->setAnchorPoint(Point(0,0));
