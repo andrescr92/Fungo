@@ -347,16 +347,17 @@ Sprite* etiqueta = Sprite::create("facu.png");
 	etiqueta25->addChild(label25); 
 
 
-	Sprite* etiqueta26 = Sprite::create("punto.png"); 
+	Sprite* etiqueta26 = Sprite::create("facu.png"); 
 	etiqueta26->setAnchorPoint(Point(0,0));
 	etiqueta26->setPosition(Point(1770,1780)); 
-	etiqueta26->setScale(0.90f, 0.90f);
+	//etiqueta26->setScale(0.90f, 0.90f);
+	etiqueta26->setScale(1.60f, 1.60f);
 	Map->addChild(etiqueta26);
 
 
 	auto label26 = LabelTTF::create("Matematica", "Arial",35);
 	label26->setColor(ccc3(0,0,0));
-    label26->setAnchorPoint(Point(-0.20, 0.0));
+    	label26->setAnchorPoint(Point(-0.20, 0.0));
 	label26->setPosition(Point(0, 0));
 	etiqueta26->addChild(label26);
 
@@ -476,6 +477,89 @@ Sprite* etiqueta = Sprite::create("facu.png");
 	label35->setAnchorPoint(Point(-0.33, 0.0));
 	label35->setPosition(Point(0, 0));
 	etiqueta35->addChild(label35);
+
+
+
+		Sprite* etiqueta52 = Sprite::create("pc.png");
+	etiqueta52->setAnchorPoint(Point(0,0));
+	etiqueta52->setPosition(Point(1430,2500));
+	etiqueta52->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta52);
+
+	 auto label52 = LabelTTF::create("C.I","Arial",35);
+	 label52->setColor(ccc3(0,0,0));
+	 label52->setAnchorPoint(Point(-0.85, 0.0));
+	 label52->setPosition(Point(0, 0));
+	 etiqueta52->addChild(label52); 
+
+
+	Sprite* etiqueta53 = Sprite::create("facu.png"); 
+	etiqueta53->setAnchorPoint(Point(0,0));
+	etiqueta53->setPosition(Point(700,2960)); 
+	etiqueta53->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta53);
+
+
+	auto label53 = LabelTTF::create("Bibliotecologia", "Arial",35);
+	label53->setColor(ccc3(0,0,0));
+    	label53->setAnchorPoint(Point(-0.20, 0.0));
+	label53->setPosition(Point(0, 0));
+	etiqueta53->addChild(label53); 
+
+
+	Sprite* etiqueta54 = Sprite::create("facu.png"); 
+	etiqueta54->setAnchorPoint(Point(0,0));
+	etiqueta54->setPosition(Point(610,3000)); 
+	etiqueta54->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta54);
+
+
+	auto label54 = LabelTTF::create("Tec. Salud", "Arial",35);
+	label54->setColor(ccc3(0,0,0));
+    	label54->setAnchorPoint(Point(-0.25, 0.0));
+	label54->setPosition(Point(0, 0));
+	etiqueta54->addChild(label54); 
+
+	Sprite* etiqueta55 = Sprite::create("facu.png"); 
+	etiqueta55->setAnchorPoint(Point(0,0));
+	etiqueta55->setPosition(Point(700,3100)); 
+	etiqueta55->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta55);
+
+
+	auto label55 = LabelTTF::create("Preescolar", "Arial",35);
+	label55->setColor(ccc3(0,0,0));
+    	label55->setAnchorPoint(Point(-0.25, 0.0));
+	label55->setPosition(Point(0, 0));
+	etiqueta55->addChild(label55); 
+	
+	Sprite* etiqueta56 = Sprite::create("ofi.png"); 
+	etiqueta56->setAnchorPoint(Point(0,0));
+	etiqueta56->setPosition(Point(700,2450)); 
+	etiqueta56->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta56);
+
+
+	auto label56 = LabelTTF::create("Casa de Idiomas", "Arial",35);
+	label56->setColor(ccc3(0,0,0));
+    label56->setAnchorPoint(Point(-0.15, 0.0));
+	label56->setPosition(Point(0, 0));
+	etiqueta56->addChild(label56); 
+
+
+	Sprite* etiqueta57 = Sprite::create("edi.png");
+	etiqueta57->setAnchorPoint(Point(0,0));
+	etiqueta57->setPosition(Point(2200,1000)); 
+	etiqueta57->setScale(1.60f, 1.60f);
+	Map->addChild(etiqueta57);
+
+
+	auto label57 = LabelTTF::create("Edificio Saprissa", "Arial",35);
+	label57->setColor(ccc3(0,0,0));
+    	label57->setAnchorPoint(Point(-0.130, 0.00));
+	label57->setPosition(Point(0, 0));
+	etiqueta57->addChild(label57);  
+
 }
 
 
