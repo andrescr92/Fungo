@@ -1,186 +1,196 @@
 #include "Etiquetas.h"
 #include "CreateMap.h" 
+//#include "Posicion.h"
 
 USING_NS_CC;
 
 void Etiquetas::createLabel()  
 {   
 	Size visibleSize = Director::getInstance()->getVisibleSize();
-	Point origin = Director::getInstance()->getVisibleOrigin(); 
-	//Array Node; 
-
-  
+	Point origin = Director::getInstance()->getVisibleOrigin();
+	
+	Posicion* otro = new Posicion; 
+	float x;
 	createMap(); 
 
-Sprite* etiqueta = Sprite::create("facu.png"); 
+	Sprite* etiqueta = Sprite::create("facu.png"); 
 	etiqueta->setAnchorPoint(Point(0,0));
 	etiqueta->setPosition(Point(500,1800));
 	etiqueta->setScale(1.60f, 1.60f);
 	Map->addChild(etiqueta);
-    //addChild(etiqueta);
-//		Node[0]=etiqueta;	
+	//x=500;
 	auto label = LabelTTF::create("Derecho", "Arial",35);
 	label->setColor(ccc3(0,0,0));
 	label->setAnchorPoint(Point(-0.30, 0.0));
 	label->setPosition(Point(0, 0));
 	etiqueta->addChild(label);  
+	otro->agregarEtiquetas(500,1800,*label);
+
+
 
 	Sprite* etiqueta1 = Sprite::create("facu.png");
 	etiqueta1->setAnchorPoint(Point(0,0));
 	etiqueta1->setPosition(Point(1400,1500));
 	etiqueta1->setScale(1.60f, 1.60f);
 	Map->addChild(etiqueta1);
-    //addChild(etiqueta);
 
 	auto label1 = LabelTTF::create("Ingenieria", "Arial",35);
 	label1->setColor(ccc3(0,0,0));
 	label1->setAnchorPoint(Point(-0.30, 0.0));
 	label1->setPosition(Point(0, 0));
 	etiqueta1->addChild(label1);  
+	otro->agregarEtiquetas(1400,1500,*label1);
+
 
 	Sprite* etiqueta2 = Sprite::create("facu.png");
 	etiqueta2->setAnchorPoint(Point(0,0));
 	etiqueta2->setPosition(Point(1600,2900)); 
 	etiqueta2->setScale(1.60f, 1.60f);
 	Map->addChild(etiqueta2);
-    //addChild(etiqueta);
 
 	auto label2 = LabelTTF::create("Odontologia", "Arial",35);
 	label2->setColor(ccc3(0,0,0));
     label2->setAnchorPoint(Point(-0.20,0.0));
 	label2->setPosition(Point(0, 0));
 	etiqueta2->addChild(label2);  
-
+	otro->agregarEtiquetas(1600,2900,*label2);
 	
 	Sprite* etiqueta3 = Sprite::create("facu.png");
 	etiqueta3->setAnchorPoint(Point(0,0));
 	etiqueta3->setPosition(Point(1600,2200)); 
 	etiqueta3->setScale(1.60f, 1.60f);
 	Map->addChild(etiqueta3);
-    //addChild(etiqueta);
+  
 
 	auto label3 = LabelTTF::create("Economicas", "Arial",35);
 	label3->setColor(ccc3(0,0,0));
     label3->setAnchorPoint(Point(-0.20, 0.0));
 	label3->setPosition(Point(0, 0));
 	etiqueta3->addChild(label3);  
+	otro->agregarEtiquetas(1600,2200,*label3);
 
 	Sprite* etiqueta4 = Sprite::create("facu.png");
 	etiqueta4->setAnchorPoint(Point(0,0));
 	etiqueta4->setPosition(Point(1050,3100)); 
 	etiqueta4->setScale(1.60f, 1.60f);
 	Map->addChild(etiqueta4);
-    //addChild(etiqueta);
+  
 
 	auto label4 = LabelTTF::create("Letras", "Arial",35);
 	label4->setColor(ccc3(0,0,0));
     label4->setAnchorPoint(Point(-0.40, 0.0));
 	label4->setPosition(Point(0, 0));
 	etiqueta4->addChild(label4);  
+	otro->agregarEtiquetas(1050,3100,*label4);
 
 	Sprite* etiqueta5 = Sprite::create("biblio.png");
 	etiqueta5->setAnchorPoint(Point(0,0));
 	etiqueta5->setPosition(Point(1900,1600)); 
 	etiqueta5->setScale(1.60f, 1.60f);
 	Map->addChild(etiqueta5);
-    //addChild(etiqueta);
+ 
 
 	auto label5 = LabelTTF::create("Monge", "Arial",35);
 	label5->setColor(ccc3(0,0,0));
     label5->setAnchorPoint(Point(-0.40, 0.0));
 	label5->setPosition(Point(0, 0));
 	etiqueta5->addChild(label5);  
+	otro->agregarEtiquetas(1900,1600,*label5);
 
 	Sprite* etiqueta6 = Sprite::create("facu.png");
 	etiqueta6->setAnchorPoint(Point(0,0));
 	etiqueta6->setPosition(Point(2300,1700)); 
 	etiqueta6->setScale(1.60f, 1.60f);
 	Map->addChild(etiqueta6);
-    //addChild(etiqueta);
+
 
 	auto label6 = LabelTTF::create("Generales", "Arial",35);
 	label6->setColor(ccc3(0,0,0));
     label6->setAnchorPoint(Point(-0.25, 0.00));
 	label6->setPosition(Point(0, 0));
 	etiqueta6->addChild(label6);  
+	otro->agregarEtiquetas(2300,1700,*label6);
 
 	Sprite* etiqueta7 = Sprite::create("cucha.png");
 	etiqueta7->setAnchorPoint(Point(0,0));
 	etiqueta7->setPosition(Point(850,2250)); 
 	etiqueta7->setScale(1.60f, 1.60f);
 	Map->addChild(etiqueta7);
-    //addChild(etiqueta);
+
 
 	auto label7 = LabelTTF::create("Comedor", "Arial",35);
 	label7->setColor(ccc3(0,0,0));
     label7->setAnchorPoint(Point(-0.30, -0.00));
 	label7->setPosition(Point(0, 0));
 	etiqueta7->addChild(label7);  
-
+	otro->agregarEtiquetas(850,2250,*label7);
+	
 	Sprite* etiqueta8 = Sprite::create("facu.png");
 	etiqueta8->setAnchorPoint(Point(0,0));
 	etiqueta8->setPosition(Point(1200,950)); 
 	etiqueta8->setScale(1.60f, 1.60f);
 	Map->addChild(etiqueta8);
-    //addChild(etiqueta);
+  
 
 	auto label8 = LabelTTF::create("Arquitectura", "Arial",35);
 	label8->setColor(ccc3(0,0,0));
     label8->setAnchorPoint(Point(-0.20, 0.0));
 	label8->setPosition(Point(0, 0));
 	etiqueta8->addChild(label8);  
-
+	otro->agregarEtiquetas(1200,950,*label8);
+	
 	Sprite* etiqueta9 = Sprite::create("facu.png");
 	etiqueta9->setAnchorPoint(Point(0,0));
 	etiqueta9->setPosition(Point(3050,1600)); 
 	etiqueta9->setScale(1.60f, 1.60f);
 	Map->addChild(etiqueta9);
-    //addChild(etiqueta);
+   
 
 	auto label9 = LabelTTF::create("Educacion", "Arial",35);
 	label9->setColor(ccc3(0,0,0));
     label9->setAnchorPoint(Point(-0.30, 0.0));
 	label9->setPosition(Point(0, 0));
 	etiqueta9->addChild(label9);  
-
+	otro->agregarEtiquetas(3050,1600,*label9);
+	
 	Sprite* etiqueta10 = Sprite::create("facu.png");
 	etiqueta10->setAnchorPoint(Point(0,0));
 	etiqueta10->setPosition(Point(3200,1850)); 
 	etiqueta10->setScale(1.60f, 1.60f);
 	Map->addChild(etiqueta10);
-    //addChild(etiqueta);
-
+  
 	auto label10 = LabelTTF::create("Bellas Artes", "Arial",35);
 	label10->setColor(ccc3(0,0,0));
     label10->setAnchorPoint(Point(-0.23, 0.0));
 	label10->setPosition(Point(0, 0));
 	etiqueta10->addChild(label10);  
+	otro->agregarEtiquetas(3200,1850,*label10);
 
 	Sprite* etiqueta11 = Sprite::create("facu.png");
 	etiqueta11->setAnchorPoint(Point(0,0));
 	etiqueta11->setPosition(Point(2950,2250)); 
 	etiqueta11->setScale(1.60f, 1.60f);
 	Map->addChild(etiqueta11);
-    //addChild(etiqueta);
-
+ 
 	auto label11 = LabelTTF::create("Quimica", "Arial",35);
 	label11->setColor(ccc3(0,0,0));
     label11->setAnchorPoint(Point(-0.30, 0.00));
 	label11->setPosition(Point(0, 0));
 	etiqueta11->addChild(label11);  
+	otro->agregarEtiquetas(2950,2250,*label11);
 
 	Sprite* etiqueta12 = Sprite::create("facu.png"); 
 	etiqueta12->setAnchorPoint(Point(0,0));
 	etiqueta12->setPosition(Point(2100,1950)); 
 	etiqueta12->setScale(1.60f, 1.60f);
-	Map->addChild(etiqueta12);
-    //addChild(etiqueta);
+	Map->addChild(etiqueta12); 
 
 	auto label12 = LabelTTF::create("Sociales", "Arial",35);
 	label12->setColor(ccc3(0,0,0));
     label12->setAnchorPoint(Point(-0.30, 0.0));
 	label12->setPosition(Point(0, 0));
 	etiqueta12->addChild(label12);   
+	otro->agregarEtiquetas(2100,1950,*label12);
 
 	Sprite* etiqueta13 = Sprite::create("audi.png");
 	etiqueta13->setAnchorPoint(Point(0,0));
@@ -189,11 +199,12 @@ Sprite* etiqueta = Sprite::create("facu.png");
 	Map->addChild(etiqueta13);
 
 
-	 auto label13 = LabelTTF::create("Auditorio", "Arial",35);
-	 label13->setColor(ccc3(0,0,0));
-	 label13->setAnchorPoint(Point(-0.30, 0.0));
-	 label13->setPosition(Point(0, 0));
-	 etiqueta13->addChild(label13); 
+	auto label13 = LabelTTF::create("Auditorio", "Arial",35);
+	label13->setColor(ccc3(0,0,0));
+	label13->setAnchorPoint(Point(-0.30, 0.0));
+	label13->setPosition(Point(0, 0));
+	etiqueta13->addChild(label13); 
+	otro->agregarEtiquetas(700,1500,*label13);
 
 
 	Sprite* etiqueta14 = Sprite::create("anfi.png");
@@ -202,12 +213,12 @@ Sprite* etiqueta = Sprite::create("facu.png");
 	etiqueta14->setScale(1.60f, 1.60f);
 	Map->addChild(etiqueta14);
 
-	 auto label14 = LabelTTF::create("Anfiteatro", "Arial",35);
-	 label14->setColor(ccc3(0,0,0));
-	 label14->setAnchorPoint(Point(-0.30, 0.0));
-	 label14->setPosition(Point(0, 0));
-	 etiqueta14->addChild(label14); 
-
+	auto label14 = LabelTTF::create("Anfiteatro", "Arial",35);
+	label14->setColor(ccc3(0,0,0));
+	label14->setAnchorPoint(Point(-0.30, 0.0));
+	label14->setPosition(Point(0, 0));
+	etiqueta14->addChild(label14); 
+	otro->agregarEtiquetas(300,1400,*label14);
 
 	Sprite* etiqueta15 = Sprite::create("edi.png");
 	etiqueta15->setAnchorPoint(Point(0,0));
@@ -215,25 +226,26 @@ Sprite* etiqueta = Sprite::create("facu.png");
 	etiqueta15->setScale(1.60f, 1.60f);
 	Map->addChild(etiqueta15);
 
-	 auto label15 = LabelTTF::create("ORI       ", "Arial",35);
-	 label15->setColor(ccc3(0,0,0));
-	 label15->setAnchorPoint(Point(-0.30, 0.0));
-	 label15->setPosition(Point(0, 0));
-	 etiqueta15->addChild(label15); 
-	  
-
+	auto label15 = LabelTTF::create("ORI       ", "Arial",35);
+	label15->setColor(ccc3(0,0,0));
+	label15->setAnchorPoint(Point(-0.30, 0.0));
+	label15->setPosition(Point(0, 0));
+	etiqueta15->addChild(label15); 
+	otro->agregarEtiquetas(500,1300,*label15);
+  
 	Sprite* etiqueta16 = Sprite::create("edi.png");
 	etiqueta16->setAnchorPoint(Point(0,0));
 	etiqueta16->setPosition(Point(500,1000));
 	etiqueta16->setScale(1.60f, 1.60f);
 	Map->addChild(etiqueta16);
 
-	 auto label16 = LabelTTF::create("Admin. B", "Arial",35);
-	 label16->setColor(ccc3(0,0,0));
-	 label16->setAnchorPoint(Point(-0.30, 0.0));
-	 label16->setPosition(Point(0, 0));
-	 etiqueta16->addChild(label16); 
-
+	auto label16 = LabelTTF::create("Admin. B", "Arial",35);
+	label16->setColor(ccc3(0,0,0));
+	label16->setAnchorPoint(Point(-0.30, 0.0));
+	label16->setPosition(Point(0, 0));
+	etiqueta16->addChild(label16); 
+	otro->agregarEtiquetas(500,1000,*label16);
+	
 	Sprite* etiqueta17 = Sprite::create("edi.png");
 	etiqueta17->setAnchorPoint(Point(0,0));
 	etiqueta17->setPosition(Point(250,1160));
@@ -245,8 +257,9 @@ Sprite* etiqueta = Sprite::create("facu.png");
 	 label17->setAnchorPoint(Point(-0.30, 0.0));
 	 label17->setPosition(Point(0, 0));
 	 etiqueta17->addChild(label17); 
-
-	Sprite* etiqueta18 = Sprite::create("edi.png");	
+	 otro->agregarEtiquetas(250,1160,*label17);
+	
+	 Sprite* etiqueta18 = Sprite::create("edi.png");	
 	etiqueta18->setAnchorPoint(Point(0,0));
 	etiqueta18->setPosition(Point(100,1000));
 	etiqueta18->setScale(1.60f, 1.60f);
@@ -257,8 +270,9 @@ Sprite* etiqueta = Sprite::create("facu.png");
 	 label18->setAnchorPoint(Point(-0.27, 0.0));
 	 label18->setPosition(Point(0, 0));
 	 etiqueta18->addChild(label18); 
-
-	Sprite* etiqueta19 = Sprite::create("facu.png");
+	 otro->agregarEtiquetas(100,1000,*label18);
+	
+	  Sprite* etiqueta19 = Sprite::create("facu.png");
 	etiqueta19->setAnchorPoint(Point(0,0));
 	etiqueta19->setPosition(Point(3430,2400));
 	etiqueta19->setScale(1.60f, 1.60f);
@@ -269,8 +283,9 @@ Sprite* etiqueta = Sprite::create("facu.png");
 	 label19->setAnchorPoint(Point(-0.33, 0.0));
 	 label19->setPosition(Point(0, 0));
 	 etiqueta19->addChild(label19); 
-
-	 Sprite* etiqueta20 = Sprite::create("facu.png");
+	 otro->agregarEtiquetas(3430,2400,*label19);
+	
+	Sprite* etiqueta20 = Sprite::create("facu.png");
 	etiqueta20->setAnchorPoint(Point(0,0));
 	etiqueta20->setPosition(Point(1600,2500));
 	etiqueta20->setScale(1.60f, 1.60f);
@@ -281,8 +296,9 @@ Sprite* etiqueta = Sprite::create("facu.png");
 	 label20->setAnchorPoint(Point(-0.25, 0.0));
 	 label20->setPosition(Point(0, 0));
 	 etiqueta20->addChild(label20); 
-
-	  Sprite* etiqueta21 = Sprite::create("facu.png");
+	 otro->agregarEtiquetas(1600,2500,*label20); 
+	 
+	Sprite* etiqueta21 = Sprite::create("facu.png");
 	etiqueta21->setAnchorPoint(Point(0,0));
 	etiqueta21->setPosition(Point(1400,2700));
 	etiqueta21->setScale(1.60f, 1.60f);
@@ -474,7 +490,7 @@ Sprite* etiqueta = Sprite::create("facu.png");
 
 	auto label35 = LabelTTF::create("Sala Cullell", "Arial",35);
 	label35->setColor(ccc3(0,0,0));
-	label35->setAnchorPoint(Point(-0.33, 0.0));
+	label35->setAnchorPoint(Point(-0.20, 0.0));
 	label35->setPosition(Point(0, 0));
 	etiqueta35->addChild(label35);
 
@@ -756,7 +772,8 @@ Sprite* etiqueta = Sprite::create("facu.png");
 }
 
 
-void  Etiquetas::setNewLabels(int a) {
+void  Etiquetas::setNewLabels(int a) 
+{
 
 /*
 	if (getSize == asdq, asq)

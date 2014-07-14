@@ -37,6 +37,9 @@
     <ClCompile Include="..\Classes\Etiquetas.cpp">
       <Filter>Classes</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\Posicion.cpp">
+      <Filter>Classes</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -62,6 +65,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\CreateMap.h" />
     <ClInclude Include="..\Classes\Etiquetas.h">
+      <Filter>Classes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\Posicion.h">
       <Filter>Classes</Filter>
     </ClInclude>
   </ItemGroup>

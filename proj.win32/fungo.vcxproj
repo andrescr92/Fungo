@@ -138,6 +138,7 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
     <ClCompile Include="..\Classes\Etiquetas.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
     <ClCompile Include="..\Classes\CreateMap.cpp" />
+    <ClCompile Include="..\Classes\Posicion.cpp" />
     <ClCompile Include="..\Classes\RetosScene.cpp" />
     <ClCompile Include="..\Classes\UsuarioScene.cpp" />
     <ClCompile Include="main.cpp" />
@@ -148,6 +149,7 @@ xcopy /Y /Q "$(EngineRoot)external\websockets\prebuilt\win32\*.*" "$(OutDir)"</C
     <ClInclude Include="..\Classes\Etiquetas.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
     <ClInclude Include="..\Classes\CreateMap.h" />
+    <ClInclude Include="..\Classes\Posicion.h" />
     <ClInclude Include="..\Classes\RetosScene.h" />
     <ClInclude Include="..\Classes\UsuarioScene.h" />
     <ClInclude Include="main.h" />
