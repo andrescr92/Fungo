@@ -233,9 +233,8 @@ void CreateMap::moveMap()
 		int y = target->getPositionY();
 		log("posicion x = %i, posicion y = %i", x, y);
 
-		float w = target->getScaleX();
-		float z = target->getScaleY();
-		log("escala x = %f, escala y = %f", w, z);
+		float w = ((target->getScaleX()*100)-25)/5;
+		log("escala = %f", w);
 
         log("node onTouchesEnded.. ");
         target->setOpacity(255);
@@ -292,6 +291,8 @@ void CreateMap::increaseSize(Ref * pSender)
 		
 		Mapa->setScaleX (Mapa->getScaleX()+0.05f);
 		Mapa->setScaleY (Mapa->getScaleY()+0.05f);
+
+		Mapa->setPosition(Mapa->getPositionX()-102.5,Mapa->getPositionY()-102.5);
 	}
 
 
@@ -308,8 +309,28 @@ void CreateMap::decreaseSize(Ref * pSender)
 	count= Map->getChildrenCount();
 	if (Mapa->getScaleX() > 0.25f && Mapa->getScaleY() > 0.25f){
 		Mapa->setScaleX (Mapa->getScaleX()-0.05f);
-			Mapa->setScaleY (Mapa->getScaleY()-0.05f); 
-			Map->getChildren(); 
+		Mapa->setScaleY (Mapa->getScaleY()-0.05f); 
+
+		if (Mapa->getScaleX()==0.25)
+		{
+			Mapa->setPosition(0,0);
+		}
+
+		if (Mapa->getPositionX()+102.5<0)
+		{
+			//if (Mapa->getPositionX()+102.5<205*(((Mapa->getScaleX()*100)-25)/5)-25)
+			Mapa->setPositionX(Mapa->getPositionX()+102.5);
+			if (Mapa->getPositionX()+101<0)
+				Mapa->setPositionX(Mapa->getPositionX()+102.5);
+		}
+		if (Mapa->getPositionY()+102.5<0)
+		{
+			//if (Mapa->getPositionY()+102.5<205*(((Mapa->getScaleX()*100)-25)/5)-25)
+			Mapa->setPositionY(Mapa->getPositionY()+102.5);
+			if (Mapa->getPositionY()+101<0)
+				Mapa->setPositionY(Mapa->getPositionY()+102.5);
+		}	
+			//Map->getChildren(); 
 			//++temporal;
 				//for(size_t i = 0; i <count ; ++i ) 
 				//{  
