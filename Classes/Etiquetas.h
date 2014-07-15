@@ -6,12 +6,13 @@
 #include <vector> 
 #include "CreateMap.h"
 #include "Posicion.h"
-
+#include <Scale9Sprite.h>
 
 class Etiquetas: public CreateMap 
 {  
 
-protected: 
+
+//protected: 
 
 public:
 	void createLabel();

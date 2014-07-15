@@ -2,27 +2,34 @@
 #define Posicion_h
 
 #include "cocos2d.h"
-#include "etiquetas.h"
+#include "Etiquetas.h"
+#include "CreateMap.h"
+#include <vector>
+#include <iostream>
+#include "extensions/cocos-ext.h"
+#include <cocos-ext.h>
 
-USING_NS_CC;
 
-class Posicion :
-	public Etiquetas
+USING_NS_CC_EXT;
+USING_NS_CC; 
+
+class Posicion
 {
 protected:
 	float Coordx; 
 	float Coordy;
-	LabelTTF nombre; 
+	char* nombre; 
 
 public:	
 	Posicion(void);
-	Posicion(float x, float y, LabelTTF etiqueta);
-	cocos2d::Vector<Posicion>lugares; 
-	void agregarEtiquetas(float x, float y, LabelTTF etiqueta);
+	Posicion(float x, float y, char* etiqueta);
+	std::vector<Posicion>  lugares; 
+	void agregarEtiquetas(float x, float y, char* etiqueta);
+
 
 //	~Posicion(); 
 	
-	CREATE_FUNC(Posicion);
+	//CREATE_FUNC(Posicion);
 };
 
 #endif
