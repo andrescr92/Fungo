@@ -827,7 +827,7 @@ void Etiquetas::createLabel()
 	otro->agregarEtiquetas(2200,1000,"Edificio Saprissa");
 
 
-		EditBox* m_pEditName;
+	/*	EditBox* m_pEditName;
 
     m_pEditName = EditBox::create(Size(1025,79), Scale9Sprite::create("Menu/barra.png"));
 
@@ -844,7 +844,7 @@ void Etiquetas::createLabel()
 
     //m_pEditName->setDelegate(this);
 
-    Map->addChild(m_pEditName);
+    Map->addChild(m_pEditName);*/
 
 }
 

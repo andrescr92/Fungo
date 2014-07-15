@@ -6,7 +6,7 @@
 #include <vector> 
 #include "CreateMap.h"
 #include "Posicion.h"
-#include <Scale9Sprite.h>
+//#include <Scale9Sprite.h>
 
 class Etiquetas: public CreateMap 
 {  
