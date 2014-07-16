@@ -1,6 +1,7 @@
 #include "CreateMap.h"
 #include "HelloWorldScene.h" 
 #include "Etiquetas.h"
+#include "Posicion.h"
 
 
 
@@ -281,8 +282,6 @@ void CreateMap::increaseSize(Ref * pSender)
 
 	  //Node* createWithArray( Map->getChildren());
 
-
-
 	//	std::vector<Node*> zoom;  
 //	zoom = Map->getChildren;
        
@@ -293,6 +292,7 @@ void CreateMap::increaseSize(Ref * pSender)
 		Mapa->setScaleY (Mapa->getScaleY()+0.05f);
 
 		Mapa->setPosition(Mapa->getPositionX()-102.5,Mapa->getPositionY()-102.5);
+
 	}
 
 
@@ -330,18 +330,31 @@ void CreateMap::decreaseSize(Ref * pSender)
 			if (Mapa->getPositionY()+101<0)
 				Mapa->setPositionY(Mapa->getPositionY()+102.5);
 		}	
-			//Map->getChildren(); 
-			//++temporal;
-				//for(size_t i = 0; i <count ; ++i ) 
-				//{  
-					//Mapa->getChildByTag(i) = this->setScaleX(Mapa->getScaleX()-0.05f); 
-					//zoom[i] = Mapa->getChildren[i]->setScaley(Mapa->getScaleY()-0.05f); 
-			//	} 			
+
 	
 	}
 
 	
 }
+
+void CreateMap::searchLabel(char* Etiqueta, Ref * pSender)
+{
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+    Point origin = Director::getInstance()->getVisibleOrigin();
+	Node* Mapa= Map;
+
+	Posicion* otro = new Posicion;
+
+	otro->llenarVector();
+
+	int pos = otro->obtenerEtiquetas(Etiqueta);
+	if (pos!=-1)
+	{
+		Mapa->setScale(0.75f);
+		Mapa->setPosition(otro->obtenerX(pos),otro->obtenerY(pos));
+	}
+}
+
 void CreateMap::procedures()
 {
 	//Etiquetas* label = new Etiquetas;
