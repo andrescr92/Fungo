@@ -2,22 +2,13 @@
 #include "CreateMap.h"
 #include "Etiquetas.h"
 #include <SimpleAudioEngine.h>
-#include <cocos-ext.h>
 #include "CCLabel.h"
 #include "CCIMEDelegate.h"
 #include <CCTextFieldTTF.h>
-#include <cocos-ext.h>
-#include "extensions/cocos-ext.h"
 #include "Textinput.h"
 
 
-//using namespace cocos2d;
-//cocos2d::extension::EditBox;
-//using namespace cocos2d::extension;
-
-
 USING_NS_CC;
-USING_NS_CC_EXT;
 
 
 Scene* HelloWorld::createScene()
@@ -78,10 +69,10 @@ bool HelloWorld::init()
     // add a label shows "Hello World"
     /// Crea e inicializa la barra del menú
     //auto Sprite1
-	auto Sprite1 = Sprite::create("Menu/barra.png");
-    Sprite1->setPosition(Point(origin.x + visibleSize.width/2,
-                            origin.y + visibleSize.height - Sprite1->getContentSize().height- 650.0f));
-    this->addChild(Sprite1, 1);
+//	auto Sprite1 = Sprite::create("Menu/barra.png");
+ //   Sprite1->setPosition(Point(origin.x + visibleSize.width/2,
+                         //   origin.y + visibleSize.height - Sprite1->getContentSize().height- 650.0f));
+   // this->addChild(Sprite1, 1);
 
     // add "HelloWorld" splash screen"
     //auto sprite = Sprite::create("mapa.png");
@@ -101,12 +92,13 @@ bool HelloWorld::init()
 	createGameTitle();
 	createGameMenu();
 	label->createLabel(); 
+	label->makeInput();
 	label->moveMap(); 
 	label->sizeMap();  
 	this->addChild(label);
-	texto->clickText();
-	texto->makeInput();
-	this->addChild(texto, 2);
+	//texto->clickText();
+	//texto->makeInput();
+	//this->addChild(texto, 2);
 	
 //	Mapa->createMap();
 //	Mapa->moveMap(); 

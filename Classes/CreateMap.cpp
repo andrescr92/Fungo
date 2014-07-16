@@ -1,6 +1,7 @@
 #include "CreateMap.h"
 #include "HelloWorldScene.h" 
 #include "Etiquetas.h"
+#include <stdlib.h>
 
 
 
@@ -268,6 +269,23 @@ void CreateMap::sizeMap()
     this->addChild(buttonMinusMenu, 2);
 
 
+	auto buttonSearch = MenuItemImage::create("Menu/barra.png", "Menu/barra.png", CC_CALLBACK_1(CreateMap::searchInput, this));
+	buttonSearch->setPosition(Point(origin.x + visibleSize.width/2,
+                            origin.y + visibleSize.height - buttonSearch->getContentSize().height- 650.0f));
+    buttonSearch->setScaleX(0.70f);
+	buttonSearch->setScaleY(0.70f);
+	auto buttonSearchMenu = Menu::create(buttonSearch, NULL);
+    buttonSearchMenu->setPosition(Point::ZERO);
+    this->addChild(buttonSearchMenu, 2);
+
+	auto buttonEnter = MenuItemImage::create("Menu/boton_menos.png", "Menu/boton_menos.png", CC_CALLBACK_1(CreateMap::searchText, this));
+	buttonEnter->setPosition(Point(origin.x + visibleSize.width/2,
+                            origin.y + visibleSize.height - buttonEnter->getContentSize().height- 600.0f));
+    buttonEnter->setScaleX(0.70f);
+	buttonEnter->setScaleY(0.70f);
+	auto buttonEnterMenu = Menu::create(buttonEnter, NULL);
+    buttonEnterMenu->setPosition(Point::ZERO);
+    this->addChild(buttonEnterMenu, 2);
 
 }
 
@@ -341,7 +359,58 @@ void CreateMap::decreaseSize(Ref * pSender)
 	}
 
 	
+} 
+
+
+void CreateMap::makeInput()
+{ 
+	textfield = TextFieldTTF::textFieldWithPlaceHolder("Search...", "Thonburi", 35); 
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+	Point origin = Director::getInstance()->getVisibleOrigin(); 
+
+	textfield->setColor(ccc3(0, 0, 0));
+	textfield->setPosition(Point(origin.x + visibleSize.width / 2,
+		origin.y + visibleSize.height - textfield->getContentSize().height - 715.0f));
+	textfield->setAnchorPoint(CCPointZero);
+	this->addChild(textfield,3);
 }
+
+
+void CreateMap::searchLabel(const std::string Etiqueta)
+{
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+    Point origin = Director::getInstance()->getVisibleOrigin();
+	
+	Node* Mapa= Map;
+
+	Posicion* otro = new Posicion;
+
+	otro->llenarVector();
+
+	int pos = otro->obtenerEtiquetas(Etiqueta);
+	if (pos!=-1)
+	{
+		Mapa->setScale(0.75f);
+		Mapa->setPosition(otro->obtenerX(pos),otro->obtenerY(pos));
+	}
+} 
+
+
+
+
+void CreateMap::searchInput(Ref * pSender)
+{   
+	textfield->attachWithIME();	
+  //  const char* etiqueta = texto.c_str();
+} 
+
+void CreateMap::searchText(Ref * pSender)
+{   	
+    const std::string texto = textfield->getString();
+  //  const char* etiqueta = texto.c_str();
+	this->searchLabel(texto); 
+} 
+
 void CreateMap::procedures()
 {
 	//Etiquetas* label = new Etiquetas;

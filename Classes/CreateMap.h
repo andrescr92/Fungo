@@ -16,6 +16,7 @@ class CreateMap: public cocos2d::Layer
 
 public:
     cocos2d::CCTMXTiledMap *Map;
+	cocos2d::CCTextFieldTTF *textfield; 
 
 public:
 	///Método que crea el mapa, es decir lo inicializa como un layer.
@@ -25,11 +26,20 @@ public:
 	void moveMap();
 	///Método que permite el escalamiento del mapa (cambio de tamaños)
 	void sizeMap();
+	
+	void makeInput();
+
+	
+	void searchLabel(const std::string Etiqueta); 
+	
+	void searchText(Ref * pSender);
 
 	void increaseSize(cocos2d::Ref* pSender);
 
 	void decreaseSize(cocos2d::Ref* pSender);
-
+	
+	void searchInput(cocos2d::Ref * pSender);
+	
 	void procedures();
 	CREATE_FUNC(CreateMap);
 };

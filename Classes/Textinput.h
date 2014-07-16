@@ -8,14 +8,15 @@ public:
 	Textinput();
 	~Textinput();
 
-	CCTextFieldTTF * textfield = TextFieldTTF::textFieldWithPlaceHolder("Search...", "Thonburi", 35);
+	//CCTextFieldTTF *textfield; 
+
 
 
 public:
-	void makeInput();
+	//void makeInput();
 	void keyboardWillShow(cocos2d::CCIMEKeyboardNotificationInfo &info);
 	void keyboardWillHide(cocos2d::CCIMEKeyboardNotificationInfo &info);
 	void ccTouchesBegans(cocos2d::CCSet *pTouches, cocos2d::CCEvent *pEvent);
-	void clickText();
+	//void clickText();
 };
 

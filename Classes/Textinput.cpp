@@ -15,8 +15,9 @@ Textinput::~Textinput()
 {
 }
 
-void Textinput::makeInput(){
+/*void Textinput::makeInput(){ 
 
+	textfield = TextFieldTTF::textFieldWithPlaceHolder("Search...", "Thonburi", 35); 
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin();
 	std::string cadena;
@@ -108,4 +109,4 @@ void Textinput::clickText()
 
 
 
-}
+} */
