@@ -23,6 +23,7 @@ public:
 	Posicion(float x, float y, std::string etiqueta);
 	
 	std::vector<Posicion>  lugares; 
+<<<<<<< HEAD
 	
 	void agregarEtiquetas(float x, float y, std::string etiqueta);
 
@@ -34,6 +35,13 @@ public:
 
 	void llenarVector();
 
+=======
+	void agregarEtiquetas(float x, float y, char* etiqueta);
+	int Posicion::obtenerEtiquetas(char* etiqueta);
+	inline float Posicion::obtenerX(int x){return lugares[x].Coordx;}
+	inline float Posicion::obtenerY(int y){return lugares[y].Coordy;}
+	void Posicion::llenarVector();
+>>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 //	~Posicion(); 
 	

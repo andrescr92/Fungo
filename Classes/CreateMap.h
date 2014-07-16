@@ -37,9 +37,15 @@ public:
 	void increaseSize(cocos2d::Ref* pSender);
 
 	void decreaseSize(cocos2d::Ref* pSender);
+<<<<<<< HEAD
 	
 	void searchInput(cocos2d::Ref * pSender);
 	
+=======
+
+	void searchLabel(char* Etiqueta, Ref * pSender);
+
+>>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 	void procedures();
 	CREATE_FUNC(CreateMap);
 };

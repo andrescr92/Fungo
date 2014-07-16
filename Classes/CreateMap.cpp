@@ -1,7 +1,11 @@
 #include "CreateMap.h"
 #include "HelloWorldScene.h" 
 #include "Etiquetas.h"
+<<<<<<< HEAD
 #include <stdlib.h>
+=======
+#include "Posicion.h"
+>>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 
 
@@ -299,8 +303,6 @@ void CreateMap::increaseSize(Ref * pSender)
 
 	  //Node* createWithArray( Map->getChildren());
 
-
-
 	//	std::vector<Node*> zoom;  
 //	zoom = Map->getChildren;
        
@@ -311,6 +313,7 @@ void CreateMap::increaseSize(Ref * pSender)
 		Mapa->setScaleY (Mapa->getScaleY()+0.05f);
 
 		Mapa->setPosition(Mapa->getPositionX()-102.5,Mapa->getPositionY()-102.5);
+
 	}
 
 
@@ -348,13 +351,7 @@ void CreateMap::decreaseSize(Ref * pSender)
 			if (Mapa->getPositionY()+101<0)
 				Mapa->setPositionY(Mapa->getPositionY()+102.5);
 		}	
-			//Map->getChildren(); 
-			//++temporal;
-				//for(size_t i = 0; i <count ; ++i ) 
-				//{  
-					//Mapa->getChildByTag(i) = this->setScaleX(Mapa->getScaleX()-0.05f); 
-					//zoom[i] = Mapa->getChildren[i]->setScaley(Mapa->getScaleY()-0.05f); 
-			//	} 			
+
 	
 	}
 
@@ -375,12 +372,19 @@ void CreateMap::makeInput()
 	this->addChild(textfield,3);
 }
 
+<<<<<<< HEAD
 
 void CreateMap::searchLabel(const std::string Etiqueta)
 {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
 	
+=======
+void CreateMap::searchLabel(char* Etiqueta, Ref * pSender)
+{
+	Size visibleSize = Director::getInstance()->getVisibleSize();
+    Point origin = Director::getInstance()->getVisibleOrigin();
+>>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 	Node* Mapa= Map;
 
 	Posicion* otro = new Posicion;
@@ -393,6 +397,7 @@ void CreateMap::searchLabel(const std::string Etiqueta)
 		Mapa->setScale(0.75f);
 		Mapa->setPosition(otro->obtenerX(pos),otro->obtenerY(pos));
 	}
+<<<<<<< HEAD
 } 
 
 
@@ -410,6 +415,9 @@ void CreateMap::searchText(Ref * pSender)
   //  const char* etiqueta = texto.c_str();
 	this->searchLabel(texto); 
 } 
+=======
+}
+>>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 void CreateMap::procedures()
 {
