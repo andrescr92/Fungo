@@ -8,6 +8,7 @@
 #include <CCTextFieldTTF.h>
 #include <cocos-ext.h>
 #include "extensions/cocos-ext.h"
+#include "Textinput.h"
 
 
 //using namespace cocos2d;
@@ -48,7 +49,8 @@ bool HelloWorld::init()
     Point origin = Director::getInstance()->getVisibleOrigin();
 
 		CreateMap* Mapa= new CreateMap; 
-		Etiquetas* label = new Etiquetas;  
+		Etiquetas* label = new Etiquetas; 
+		Textinput* texto = new Textinput;
 
 
 
@@ -76,10 +78,10 @@ bool HelloWorld::init()
     // add a label shows "Hello World"
     /// Crea e inicializa la barra del menú
     //auto Sprite1
-	
-   // Sprite1->setPosition(Point(origin.x + visibleSize.width/2,
-                        //    origin.y + visibleSize.height - Sprite1->getContentSize().height- 650.0f));
-    //this->addChild(Sprite1, 1);
+	auto Sprite1 = Sprite::create("Menu/barra.png");
+    Sprite1->setPosition(Point(origin.x + visibleSize.width/2,
+                            origin.y + visibleSize.height - Sprite1->getContentSize().height- 650.0f));
+    this->addChild(Sprite1, 1);
 
     // add "HelloWorld" splash screen"
     //auto sprite = Sprite::create("mapa.png");
@@ -89,6 +91,12 @@ bool HelloWorld::init()
 
 	//add the sprite as a child to this layer
     //this->addChild(sprite, 0);
+	/*CCTextFieldTTF* textfield = CCTextFieldTTF::textFieldWithPlaceHolder("click here for input", "Thonburi", 20);
+	textfield->setColor(ccc3(255, 255, 255));
+	textfield->setPosition(Point(origin.x + visibleSize.width / 2,
+		origin.y + visibleSize.height - Sprite1->getContentSize().height - 650.0f));
+	this->addChild(textfield, 2);*/
+
 
 	createGameTitle();
 	createGameMenu();
@@ -96,6 +104,9 @@ bool HelloWorld::init()
 	label->moveMap(); 
 	label->sizeMap();  
 	this->addChild(label);
+	texto->clickText();
+	texto->makeInput();
+	this->addChild(texto, 2);
 	
 //	Mapa->createMap();
 //	Mapa->moveMap(); 
