@@ -270,20 +270,19 @@ void CreateMap::sizeMap()
     this->addChild(buttonMinusMenu, 2);
 
 
-	auto buttonSearch = MenuItemImage::create("Menu/barra.png", "Menu/barra.png", CC_CALLBACK_1(CreateMap::searchInput, this));
-	buttonSearch->setPosition(Point(origin.x + visibleSize.width/2,
-                            origin.y + visibleSize.height - buttonSearch->getContentSize().height- 650.0f));
-    buttonSearch->setScaleX(0.70f);
-	buttonSearch->setScaleY(0.70f);
+	auto buttonSearch = MenuItemImage::create("trans.png", "trans.png", CC_CALLBACK_1(CreateMap::searchInput, this));
+	buttonSearch->setPosition(Point(origin.x +visibleSize.width/2 * 1.2f, origin.y + visibleSize.height * 0.053f));
+    buttonSearch->setScaleX(0.50f);
+ //	buttonSearch->setScaleY(0.70f);
+//	buttonSearch->setOpacity(320);
 	auto buttonSearchMenu = Menu::create(buttonSearch, NULL);
     buttonSearchMenu->setPosition(Point::ZERO);
     this->addChild(buttonSearchMenu, 2);
 
-	auto buttonEnter = MenuItemImage::create("Menu/boton_menos.png", "Menu/boton_menos.png", CC_CALLBACK_1(CreateMap::searchText, this));
-	buttonEnter->setPosition(Point(origin.x + visibleSize.width/2,
-                            origin.y + visibleSize.height - buttonEnter->getContentSize().height- 600.0f));
-    buttonEnter->setScaleX(0.70f);
-	buttonEnter->setScaleY(0.70f);
+	auto buttonEnter = MenuItemImage::create("botonbus1.png", "botonbus2.png", CC_CALLBACK_1(CreateMap::searchText, this));
+	buttonEnter->setPosition(Point(origin.x +visibleSize.width/2 * 0.93f, origin.y + visibleSize.height * 0.053f));
+    buttonEnter->setScaleX(0.50f);
+	buttonEnter->setScaleY(0.50f);
 	auto buttonEnterMenu = Menu::create(buttonEnter, NULL);
     buttonEnterMenu->setPosition(Point::ZERO);
     this->addChild(buttonEnterMenu, 2);
@@ -297,12 +296,6 @@ void CreateMap::increaseSize(Ref * pSender)
 
 
 		Node* Mapa= Map;
-
-	  //Node* createWithArray( Map->getChildren());
-
-	//	std::vector<Node*> zoom;  
-//	zoom = Map->getChildren;
-       
 
 	if (Mapa->getScaleX() < 1.0f && Mapa->getScaleY() < 1.0f){
 		
@@ -394,13 +387,11 @@ void CreateMap::searchLabel(const std::string Etiqueta)
 void CreateMap::searchInput(Ref * pSender)
 {   
 	textfield->attachWithIME();	
-  //  const char* etiqueta = texto.c_str();
 } 
 
 void CreateMap::searchText(Ref * pSender)
 {   	
     const std::string texto = textfield->getString();
-  //  const char* etiqueta = texto.c_str();
 	this->searchLabel(texto); 
 } 
 

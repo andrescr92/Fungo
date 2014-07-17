@@ -68,11 +68,10 @@ bool HelloWorld::init()
 
     // add a label shows "Hello World"
     /// Crea e inicializa la barra del menú
-    //auto Sprite1
-//	auto Sprite1 = Sprite::create("Menu/barra.png");
- //   Sprite1->setPosition(Point(origin.x + visibleSize.width/2,
-                         //   origin.y + visibleSize.height - Sprite1->getContentSize().height- 650.0f));
-   // this->addChild(Sprite1, 1);
+	//auto Sprite1 = Sprite::create("Menu/barra.png");
+    //Sprite1->setPosition(Point(origin.x + visibleSize.width/2,
+                          // origin.y + visibleSize.height - Sprite1->getContentSize().height- 650.0f));
+   // this->addChild(Sprite1, 2);
 
     // add "HelloWorld" splash screen"
     //auto sprite = Sprite::create("mapa.png");

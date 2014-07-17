@@ -28,7 +28,6 @@ public:
 	void sizeMap();
 	
 	void makeInput();
-
 	
 	void searchLabel(const std::string Etiqueta); 
 	
@@ -39,8 +38,6 @@ public:
 	void decreaseSize(cocos2d::Ref* pSender);
 
 	void searchInput(cocos2d::Ref * pSender);
-	
-
 
 	void searchLabel(char* Etiqueta, Ref * pSender);
 
