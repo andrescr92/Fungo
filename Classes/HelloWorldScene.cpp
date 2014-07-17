@@ -5,7 +5,6 @@
 #include "CCLabel.h"
 #include "CCIMEDelegate.h"
 #include <CCTextFieldTTF.h>
-#include "Textinput.h"
 
 
 USING_NS_CC;
@@ -41,8 +40,6 @@ bool HelloWorld::init()
 
 		CreateMap* Mapa= new CreateMap; 
 		Etiquetas* label = new Etiquetas; 
-		Textinput* texto = new Textinput;
-
 
 
     /////////////////////////////
@@ -62,32 +59,8 @@ bool HelloWorld::init()
     auto menu = Menu::create(closeItem, NULL);
     menu->setPosition(Point::ZERO);
     this->addChild(menu, 2);
-
-    /////////////////////////////
-    // 3. add your codes below...
-
-    // add a label shows "Hello World"
-    /// Crea e inicializa la barra del menú
-	//auto Sprite1 = Sprite::create("Menu/barra.png");
-    //Sprite1->setPosition(Point(origin.x + visibleSize.width/2,
-                          // origin.y + visibleSize.height - Sprite1->getContentSize().height- 650.0f));
-   // this->addChild(Sprite1, 2);
-
-    // add "HelloWorld" splash screen"
-    //auto sprite = Sprite::create("mapa.png");
-
-    // position the sprite on the center of the screen
-    //sprite->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-
-	//add the sprite as a child to this layer
-    //this->addChild(sprite, 0);
-	/*CCTextFieldTTF* textfield = CCTextFieldTTF::textFieldWithPlaceHolder("click here for input", "Thonburi", 20);
-	textfield->setColor(ccc3(255, 255, 255));
-	textfield->setPosition(Point(origin.x + visibleSize.width / 2,
-		origin.y + visibleSize.height - Sprite1->getContentSize().height - 650.0f));
-	this->addChild(textfield, 2);*/
-
-
+ 
+	
 	createGameTitle();
 	createGameMenu();
 	label->createLabel(); 
@@ -95,27 +68,10 @@ bool HelloWorld::init()
 	label->moveMap(); 
 	label->sizeMap();  
 	this->addChild(label);
-	//texto->clickText();
-	//texto->makeInput();
-	//this->addChild(texto, 2);
-	
-//	Mapa->createMap();
-//	Mapa->moveMap(); 
-//	Mapa->sizeMap();
-//	this->addChild(Mapa);
-	
-	
-	
-	
-
-
-
-
-
 
 	
 
-   auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
+    auto sound = CocosDenshion::SimpleAudioEngine::getInstance();
 	sound->stopBackgroundMusic();
 	sound->playBackgroundMusic("Musica/Fungo.mp3", true);
     return true;
@@ -132,12 +88,10 @@ void HelloWorld::createGameTitle()
 	this->addChild(gameTitle, 0);
 
 
-
 	// Hacer una animacion con el titulo del juego cambiando su imagen (textura) en el tiempo
 	auto animation = Animation::create();
 	for ( int i = 1; i < 5; ++i )
 		animation->addSpriteFrameWithFile( String::createWithFormat("Menu/logo%i.png", i)->getCString() );
-	
 	
 	
 	// Indicarle que muestre cada una de las imagenes que la componen por 0.1333 segundos
@@ -204,12 +158,6 @@ void HelloWorld::showUsuario(Ref * pSender)
 	Director::getInstance()->replaceScene(CCTransitionCrossFade::create(0.75f, newScene));
 }
 
-/*void HelloWorld::moveMap()
-{
-	
-	Mapa->moveMap();
-
-}*/
 
 void HelloWorld::menuCloseCallback(Ref* pSender)
 {

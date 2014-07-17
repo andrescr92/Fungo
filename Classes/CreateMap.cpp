@@ -5,26 +5,8 @@
 #include "Posicion.h"
 
 
-
 USING_NS_CC;
 
-
-
-
-/*void CreateMap::crearMapa()
-{
-
-	Size visibleSize = Director::getInstance()->getVisibleSize();
-    Point origin = Director::getInstance()->getVisibleOrigin();
-
-	auto map = Sprite::create("mapa.png");
-	map->setPosition(Point(visibleSize.width/2 + origin.x, visibleSize.height/2 + origin.y));
-	map->setOpacityModifyRGB(true);
-	this->addChild(map,0);
-
-
-
-}*/
 
  void CreateMap::createMap()  
 {
@@ -37,21 +19,7 @@ USING_NS_CC;
 	//Añade el mapa a la escena en la capa "0"
 	addChild(Map, 0); 
 
-/*	 
-	/* for(size_t i = 0; i < 40; ++i)
-	{
-		Etiquetas[i] = Sprite::create("etiquetamediana.png");  
-		Etiquetas[i]->setPosition(Point(1500,1100));
-		Map->addChild(Etiquetas[i]);
-		//Etiquetas[i]->texto = LabelTTF::create("Derecho", "Arial",35); 
-		//texto->setColor(ccc3(0,0,0)); 
-		//texto->setPosition(Point(0, 0));
-		//etiqueta->addChild(texto); 
-	} */
-
 }
-
-
 
 //Encargado de mover al mapa (desplazarlo)
 void CreateMap::moveMap()
@@ -249,7 +217,7 @@ void CreateMap::moveMap()
 }
 
 void CreateMap::sizeMap()
-{
+{   //Implementa el botón de más (el que  llama al evento para agrandar el mapa)
 	Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
 	auto buttonPlus = MenuItemImage::create("Menu/boton_mas.png", "Menu/boton_mas1.png", CC_CALLBACK_1(CreateMap::increaseSize, this));
@@ -260,7 +228,7 @@ void CreateMap::sizeMap()
     buttonPlusMenu->setPosition(Point::ZERO);
     this->addChild(buttonPlusMenu, 2);
 
-
+	//Implementa el botón de menos (invoca al evento para disminuir el tamaño del mapa)
 	auto buttonMinus = MenuItemImage::create("Menu/boton_menos.png", "Menu/boton_menos1.png", CC_CALLBACK_1(CreateMap::decreaseSize, this));
 	buttonMinus->setPosition(Point(visibleSize.width * 0.035f , origin.y + visibleSize.height * 0.350f));
     buttonMinus->setScaleX(0.70f);
@@ -270,15 +238,15 @@ void CreateMap::sizeMap()
     this->addChild(buttonMinusMenu, 2);
 
 
+	//Crea un botón transparente, con el único objetivo que permite llamar al evento para que el usuario pueda escribir.
 	auto buttonSearch = MenuItemImage::create("trans.png", "trans.png", CC_CALLBACK_1(CreateMap::searchInput, this));
 	buttonSearch->setPosition(Point(origin.x +visibleSize.width/2 * 1.2f, origin.y + visibleSize.height * 0.053f));
     buttonSearch->setScaleX(0.50f);
- //	buttonSearch->setScaleY(0.70f);
-//	buttonSearch->setOpacity(320);
 	auto buttonSearchMenu = Menu::create(buttonSearch, NULL);
     buttonSearchMenu->setPosition(Point::ZERO);
     this->addChild(buttonSearchMenu, 2);
 
+	//Botón que permite iniciar la búsqueda de la ubicación ingresada por el usuario en el mapa.
 	auto buttonEnter = MenuItemImage::create("botonbus1.png", "botonbus2.png", CC_CALLBACK_1(CreateMap::searchText, this));
 	buttonEnter->setPosition(Point(origin.x +visibleSize.width/2 * 0.93f, origin.y + visibleSize.height * 0.053f));
     buttonEnter->setScaleX(0.50f);
@@ -296,17 +264,16 @@ void CreateMap::increaseSize(Ref * pSender)
 
 
 		Node* Mapa= Map;
-
+	//Establece un límite de tamaño máximo en el mapa. 
 	if (Mapa->getScaleX() < 1.0f && Mapa->getScaleY() < 1.0f){
 		
+		//Por cada zoom, el tamaño del mapa aumenta 0.05f.
 		Mapa->setScaleX (Mapa->getScaleX()+0.05f);
 		Mapa->setScaleY (Mapa->getScaleY()+0.05f);
 
+		//Limita el movimiento del mapa dentro del área visual.
 		Mapa->setPosition(Mapa->getPositionX()-102.5,Mapa->getPositionY()-102.5);
-
 	}
-
-
 }
  
 void CreateMap::decreaseSize(Ref * pSender)
@@ -315,42 +282,43 @@ void CreateMap::decreaseSize(Ref * pSender)
 	Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
 	Node* Mapa= Map;
-	size_t count;
-	//int temporal;
-	count= Map->getChildrenCount();
+
+	//Establece el tamaño mínimo del mapa. 
 	if (Mapa->getScaleX() > 0.25f && Mapa->getScaleY() > 0.25f){
+		//Reduce el tamaño del mapa en un 0.05f por cada vez que este método es llamado.
 		Mapa->setScaleX (Mapa->getScaleX()-0.05f);
 		Mapa->setScaleY (Mapa->getScaleY()-0.05f); 
 
+		//Limita el movimiento del mapa dentro del área visual.
 		if (Mapa->getScaleX()==0.25)
 		{
 			Mapa->setPosition(0,0);
 		}
 
+		//Limita el movimiento del mapa dentro del área visual.
 		if (Mapa->getPositionX()+102.5<0)
 		{
-			//if (Mapa->getPositionX()+102.5<205*(((Mapa->getScaleX()*100)-25)/5)-25)
 			Mapa->setPositionX(Mapa->getPositionX()+102.5);
 			if (Mapa->getPositionX()+101<0)
 				Mapa->setPositionX(Mapa->getPositionX()+102.5);
 		}
+
+		//Limita el movimiento del mapa dentro del área visual.
 		if (Mapa->getPositionY()+102.5<0)
 		{
-			//if (Mapa->getPositionY()+102.5<205*(((Mapa->getScaleX()*100)-25)/5)-25)
 			Mapa->setPositionY(Mapa->getPositionY()+102.5);
 			if (Mapa->getPositionY()+101<0)
 				Mapa->setPositionY(Mapa->getPositionY()+102.5);
 		}	
 
-	
 	}
-
 	
 } 
 
 
 void CreateMap::makeInput()
-{ 
+{   //Permite crear la entrada de texto utilizada por el usuario para sus búsquedas. Se posiciona centradamente en la parte
+	//inferior del mapa con letra tipo "Thonburi" de tamaño 35 y de color negro.
 	textfield = TextFieldTTF::textFieldWithPlaceHolder("Search...", "Thonburi", 35); 
 	Size visibleSize = Director::getInstance()->getVisibleSize();
 	Point origin = Director::getInstance()->getVisibleOrigin(); 
@@ -369,11 +337,17 @@ void CreateMap::searchLabel(const std::string Etiqueta)
     Point origin = Director::getInstance()->getVisibleOrigin();
 	Node* Mapa= Map;
 
+	//Instancia un objeto de la clase Posicion que servirá para buscar las etiquetas en el mapa.
 	Posicion* otro = new Posicion;
 
+	//Llamado a el método llenarVector de la clase Posicion.
 	otro->llenarVector();
 
+	//Variable que guarda la posición de la etiqueta en la base de datos, en caso de no ser encontrada
+	//tomará el valor de -1.
 	int pos = otro->obtenerEtiquetas(Etiqueta);
+
+	//Si se encuentra la etiqueta en el vector se hace zoom en el mapa y se ubica la etiqueta.
 	if (pos!=-1)
 	{
 		Mapa->setScale(0.75f);
@@ -382,25 +356,20 @@ void CreateMap::searchLabel(const std::string Etiqueta)
 } 
 
 
-
-
 void CreateMap::searchInput(Ref * pSender)
 {   
+	//Se invoca al métdo de la clase CCTextFieldTTF cuya función es abrir el teclado en un dispositivo móvil y 
+	//permitir que el usuario pueda ingresar algún texto de búsqueda.
 	textfield->attachWithIME();	
 } 
 
 void CreateMap::searchText(Ref * pSender)
-{   	
+{   //Se invoca la función de la clase CCTextFieldTTF para obtener el texto ingresado por el usario.	
     const std::string texto = textfield->getString();
+	//Se invoca al método que busca el texto anterior en la base de datos.
 	this->searchLabel(texto); 
 } 
 
 
-void CreateMap::procedures()
-{
-	//Etiquetas* label = new Etiquetas;
-	//label->sizeMap(); 
 
-
-}
 

@@ -5,7 +5,7 @@
 
 USING_NS_CC;
 
-
+//Constructor 
 Posicion::Posicion(float x, float y, std::string etiqueta)
 		:Coordx(x)
 		,Coordy(y)
@@ -13,14 +13,19 @@ Posicion::Posicion(float x, float y, std::string etiqueta)
 	{
 	} 
 
-void Posicion::agregarEtiquetas(float x, float y, std::string etiqueta)
-{ 
-	Posicion nuevo(x,y,etiqueta);
-	lugares.push_back(nuevo);
-
+//Constructor por defecto.
+Posicion::Posicion(void)
+{
 } 
 
+void Posicion::agregarEtiquetas(float x, float y, std::string etiqueta)
+{   //Se invoca el constructor.
+	Posicion nuevo(x,y,etiqueta);
+	//Se agrega al final del vector el objeto recientemente agregado.
+	lugares.push_back(nuevo);
+} 
 
+//Llena el vector "Lugares" con las etiquetas del mapa y sus respectivas posiciones.
 void Posicion::llenarVector()
 {
 	agregarEtiquetas(0,-1024,"Derecho");
@@ -82,16 +87,17 @@ void Posicion::llenarVector()
 	agregarEtiquetas(-1325,-435,"Edificio Saprissa");
 }
 
-Posicion::Posicion(void)
-{
-} 
 
 int Posicion::obtenerEtiquetas(const std::string etiqueta)
 { 
+	//Variable que sirve de bandera en los siguientes ciclos
 	bool encontrado = false;
 	std::locale loc;
+
+	//Ciclo que recorre todo el vector "Lugares"
 	for (int i = 0;i<lugares.size();++i)
 	{
+		//Ciclo que recorre el texto de las etiquetas y lo compara con el texto a buscar ignorando mayúsculas y minúsculas.
 		for (int j = 0; j < lugares[i].nombre.length(); ++j)
 		{
 			if (std::tolower(lugares[i].nombre[j],loc)==std::tolower(etiqueta[j],loc))
@@ -105,11 +111,8 @@ int Posicion::obtenerEtiquetas(const std::string etiqueta)
 		if (encontrado)
 			return i;
 	}
+	//Retorna -1 en caso de no encontrarse una etiqueta con el mismo texto.
 	return -1;
 } 
 
 
-/* Posicion::~Posicion(void)
-{  
-	delete Posicion;
-}*/

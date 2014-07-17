@@ -14,28 +14,23 @@ class HelloWorld : public cocos2d::Layer
 
 
 public:
-    // there's no 'id' in cpp, so we recommend returning the class instance pointer
+    ///There's no 'id' in cpp, so we recommend returning the class instance pointer
     static cocos2d::Scene* createScene();
 
-    // Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
+    ///Here's a difference. Method 'init' in cocos2d-x returns bool, instead of returning 'id' in cocos2d-iphone
     virtual bool init();  
     
-    // a selector callback
+    ///A selector callback
     void menuCloseCallback(cocos2d::Ref* pSender);
 
-	//Al hacer click en Botón Chat
+	///Al hacer click en Botón Chat
 	void showChat (cocos2d::Ref* pSender);
-	//Al hacer click en Botón Retos 
+	///Al hacer click en Botón Retos 
 	void showRetos(cocos2d::Ref* pSender);
-	//Al hacer click en Botón Usuario
+	///Al hacer click en Botón Usuario
 	void showUsuario(cocos2d::Ref* pSender);
-
-	void moveMap();
-
-
-
-    
-    // implement the "static create()" method manually
+	   
+    ///Implement the "static create()" method manually
     CREATE_FUNC(HelloWorld);
 
 private:
