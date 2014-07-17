@@ -1,5 +1,7 @@
 #include "Posicion.h"
 #include <stdlib.h>
+#include <string>
+#include <locale>
 
 USING_NS_CC;
 
@@ -86,13 +88,23 @@ Posicion::Posicion(void)
 
 int Posicion::obtenerEtiquetas(const std::string etiqueta)
 { 
-	//log("Etiqueta a buscar = %s", etiqueta);
+	bool encontrado = false;
+	std::locale loc;
 	for (int i = 0;i<lugares.size();++i)
-		if (lugares[i].nombre==etiqueta)
+	{
+		for (int j = 0; j < lugares[i].nombre.length(); ++j)
 		{
-			//log("Posicion en el vector = %i", i);
-			return i;
+			if (std::tolower(lugares[i].nombre[j],loc)==std::tolower(etiqueta[j],loc))
+				encontrado = true;
+			else
+			{
+				encontrado = false;
+				break;
+			}
 		}
+		if (encontrado)
+			return i;
+	}
 	return -1;
 } 
 
