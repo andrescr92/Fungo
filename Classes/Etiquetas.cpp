@@ -444,7 +444,6 @@ void Etiquetas::createLabel()
 	label33->setColor(ccc3(0,0,0));
     label33->setAnchorPoint(Point(-0.16, 0.0));
 	label33->setPosition(Point(0, 0));
-	etiqueta33->addChild(label33); 
 	etiqueta33->addChild(label33); 	
 	
 	Sprite* etiqueta34 = Sprite::create("inves.png");

@@ -27,7 +27,7 @@ void Posicion::llenarVector()
 	agregarEtiquetas(-770,-1325,"Economicas");
 	agregarEtiquetas(-375,-2022,"Letras");
 	agregarEtiquetas(-1000,-875,"Monge");
-	agregarEtiquetas(2300,1700,"Generales");
+	agregarEtiquetas(-1320,-951,"Generales");
 	agregarEtiquetas(-1335,-970,"Comedor");
 	agregarEtiquetas(-510,-390,"Arquitectura");
 	agregarEtiquetas(-1895,-880,"Educacion");
