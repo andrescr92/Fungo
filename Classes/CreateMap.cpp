@@ -368,6 +368,7 @@ void CreateMap::searchText(Ref * pSender)
     const std::string texto = textfield->getString();
 	//Se invoca al método que busca el texto anterior en la base de datos.
 	this->searchLabel(texto); 
+	textfield->setString("");
 } 
 
 
