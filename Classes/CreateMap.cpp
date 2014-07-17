@@ -1,11 +1,8 @@
 #include "CreateMap.h"
 #include "HelloWorldScene.h" 
 #include "Etiquetas.h"
-<<<<<<< HEAD
 #include <stdlib.h>
-=======
 #include "Posicion.h"
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 
 
@@ -372,19 +369,11 @@ void CreateMap::makeInput()
 	this->addChild(textfield,3);
 }
 
-<<<<<<< HEAD
 
 void CreateMap::searchLabel(const std::string Etiqueta)
 {
 	Size visibleSize = Director::getInstance()->getVisibleSize();
     Point origin = Director::getInstance()->getVisibleOrigin();
-	
-=======
-void CreateMap::searchLabel(char* Etiqueta, Ref * pSender)
-{
-	Size visibleSize = Director::getInstance()->getVisibleSize();
-    Point origin = Director::getInstance()->getVisibleOrigin();
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 	Node* Mapa= Map;
 
 	Posicion* otro = new Posicion;
@@ -397,7 +386,6 @@ void CreateMap::searchLabel(char* Etiqueta, Ref * pSender)
 		Mapa->setScale(0.75f);
 		Mapa->setPosition(otro->obtenerX(pos),otro->obtenerY(pos));
 	}
-<<<<<<< HEAD
 } 
 
 
@@ -415,9 +403,7 @@ void CreateMap::searchText(Ref * pSender)
   //  const char* etiqueta = texto.c_str();
 	this->searchLabel(texto); 
 } 
-=======
-}
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
+
 
 void CreateMap::procedures()
 {

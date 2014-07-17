@@ -7,28 +7,7 @@ USING_NS_CC;
 void Etiquetas::createLabel()  
 {   
 	Size visibleSize = Director::getInstance()->getVisibleSize();
-	Point origin = Director::getInstance()->getVisibleOrigin();
-<<<<<<< HEAD
-	
-//	Posicion* otro = new Posicion; 
-	float x;
-	createMap(); 
-
-	Sprite* etiqueta = Sprite::create("facu.png"); 
-	etiqueta->setAnchorPoint(Point(0,0));
-	etiqueta->setPosition(Point(500,1800));
-	etiqueta->setScale(1.60f, 1.60f);
-	Map->addChild(etiqueta);
-	//x=500;
-	auto label = LabelTTF::create("Derecho", "Arial",35);
-	label->setColor(ccc3(0,0,0));
-	label->setAnchorPoint(Point(-0.30, 0.0));
-	label->setPosition(Point(0, 0));
-	etiqueta->addChild(label);  
-//	otro->agregarEtiquetas(500,1800,"Derecho");
-
-=======
-	Posicion* otro = new Posicion;
+	Point origin = Director::getInstance()->getVisibleOrigin();	
 
 	float x;
 	createMap(); 
@@ -38,7 +17,6 @@ void Etiquetas::createLabel()
 	etiqueta0->setPosition(Point(500,1800));
 	etiqueta0->setScale(1.60f, 1.60f);
 	Map->addChild(etiqueta0);
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 	auto label0 = LabelTTF::create("Derecho", "Arial",35);
 	label0->setColor(ccc3(0,0,0));
@@ -57,11 +35,6 @@ void Etiquetas::createLabel()
 	label1->setAnchorPoint(Point(-0.30, 0.0));
 	label1->setPosition(Point(0, 0));
 	etiqueta1->addChild(label1);  
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(1400,1500,"Ingenieria");
-
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 	Sprite* etiqueta2 = Sprite::create("facu.png");
 	etiqueta2->setAnchorPoint(Point(0,0));
@@ -73,12 +46,8 @@ void Etiquetas::createLabel()
 	label2->setColor(ccc3(0,0,0));
     label2->setAnchorPoint(Point(-0.20,0.0));
 	label2->setPosition(Point(0, 0));
-<<<<<<< HEAD
 	etiqueta2->addChild(label2);  
-//	otro->agregarEtiquetas(1600,2900,"Odontologia");
-=======
-	etiqueta2->addChild(label2); 
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
+
 	
 	Sprite* etiqueta3 = Sprite::create("facu.png");
 	etiqueta3->setAnchorPoint(Point(0,0));
@@ -91,10 +60,6 @@ void Etiquetas::createLabel()
     label3->setAnchorPoint(Point(-0.20, 0.0));
 	label3->setPosition(Point(0, 0));
 	etiqueta3->addChild(label3);  
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(1600,2200,"Economicas");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 	Sprite* etiqueta4 = Sprite::create("facu.png");
 	etiqueta4->setAnchorPoint(Point(0,0));
@@ -107,10 +72,6 @@ void Etiquetas::createLabel()
     label4->setAnchorPoint(Point(-0.40, 0.0));
 	label4->setPosition(Point(0, 0));
 	etiqueta4->addChild(label4);  
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(1050,3100,"Letras");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 	Sprite* etiqueta5 = Sprite::create("biblio.png");
 	etiqueta5->setAnchorPoint(Point(0,0));
@@ -123,10 +84,6 @@ void Etiquetas::createLabel()
     label5->setAnchorPoint(Point(-0.40, 0.0));
 	label5->setPosition(Point(0, 0));
 	etiqueta5->addChild(label5);  
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(1900,1600,"Monge");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 	Sprite* etiqueta6 = Sprite::create("facu.png");
 	etiqueta6->setAnchorPoint(Point(0,0));
@@ -139,10 +96,6 @@ void Etiquetas::createLabel()
     label6->setAnchorPoint(Point(-0.25, 0.00));
 	label6->setPosition(Point(0, 0));
 	etiqueta6->addChild(label6);  
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(2300,1700,"Generales");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 	Sprite* etiqueta7 = Sprite::create("cucha.png");
 	etiqueta7->setAnchorPoint(Point(0,0));
@@ -155,10 +108,6 @@ void Etiquetas::createLabel()
     label7->setAnchorPoint(Point(-0.30, -0.00));
 	label7->setPosition(Point(0, 0));
 	etiqueta7->addChild(label7);  
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(850,2250,"Comedor");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 	
 	Sprite* etiqueta8 = Sprite::create("facu.png");
 	etiqueta8->setAnchorPoint(Point(0,0));
@@ -171,10 +120,6 @@ void Etiquetas::createLabel()
     label8->setAnchorPoint(Point(-0.20, 0.0));
 	label8->setPosition(Point(0, 0));
 	etiqueta8->addChild(label8);  
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(1200,950,"Arquitectura");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 	
 	Sprite* etiqueta9 = Sprite::create("facu.png");
 	etiqueta9->setAnchorPoint(Point(0,0));
@@ -187,10 +132,6 @@ void Etiquetas::createLabel()
     label9->setAnchorPoint(Point(-0.30, 0.0));
 	label9->setPosition(Point(0, 0));
 	etiqueta9->addChild(label9);  
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(3050,1600,"Educacion");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 	
 	Sprite* etiqueta10 = Sprite::create("facu.png");
 	etiqueta10->setAnchorPoint(Point(0,0));
@@ -203,10 +144,6 @@ void Etiquetas::createLabel()
     label10->setAnchorPoint(Point(-0.23, 0.0));
 	label10->setPosition(Point(0, 0));
 	etiqueta10->addChild(label10);  
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(3200,1850,"Bellas Artes");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 	Sprite* etiqueta11 = Sprite::create("facu.png");
 	etiqueta11->setAnchorPoint(Point(0,0));
@@ -219,10 +156,6 @@ void Etiquetas::createLabel()
     label11->setAnchorPoint(Point(-0.30, 0.00));
 	label11->setPosition(Point(0, 0));
 	etiqueta11->addChild(label11);  
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(2950,2250,"Quimica");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 	Sprite* etiqueta12 = Sprite::create("facu.png"); 
 	etiqueta12->setAnchorPoint(Point(0,0));
@@ -235,10 +168,6 @@ void Etiquetas::createLabel()
     label12->setAnchorPoint(Point(-0.30, 0.0));
 	label12->setPosition(Point(0, 0));
 	etiqueta12->addChild(label12);   
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(2100,1950,"Sociales");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 	Sprite* etiqueta13 = Sprite::create("audi.png");
 	etiqueta13->setAnchorPoint(Point(0,0));
@@ -252,10 +181,6 @@ void Etiquetas::createLabel()
 	label13->setAnchorPoint(Point(-0.30, 0.0));
 	label13->setPosition(Point(0, 0));
 	etiqueta13->addChild(label13); 
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(700,1500,"Auditorio");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 
 	Sprite* etiqueta14 = Sprite::create("anfi.png");
@@ -269,10 +194,6 @@ void Etiquetas::createLabel()
 	label14->setAnchorPoint(Point(-0.30, 0.0));
 	label14->setPosition(Point(0, 0));
 	etiqueta14->addChild(label14); 
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(300,1400,"Anfiteatro");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 	Sprite* etiqueta15 = Sprite::create("edi.png");
 	etiqueta15->setAnchorPoint(Point(0,0));
@@ -285,10 +206,6 @@ void Etiquetas::createLabel()
 	label15->setAnchorPoint(Point(-0.30, 0.0));
 	label15->setPosition(Point(0, 0));
 	etiqueta15->addChild(label15); 
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(500,1300,"ORI");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
   
 	Sprite* etiqueta16 = Sprite::create("edi.png");
 	etiqueta16->setAnchorPoint(Point(0,0));
@@ -301,10 +218,6 @@ void Etiquetas::createLabel()
 	label16->setAnchorPoint(Point(-0.30, 0.0));
 	label16->setPosition(Point(0, 0));
 	etiqueta16->addChild(label16); 
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(500,1000,"Admin. B");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 	
 	Sprite* etiqueta17 = Sprite::create("edi.png");
 	etiqueta17->setAnchorPoint(Point(0,0));
@@ -317,10 +230,6 @@ void Etiquetas::createLabel()
 	 label17->setAnchorPoint(Point(-0.30, 0.0));
 	 label17->setPosition(Point(0, 0));
 	 etiqueta17->addChild(label17); 
-<<<<<<< HEAD
-//	 otro->agregarEtiquetas(250,1160,"Admin. C");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 	
 	 Sprite* etiqueta18 = Sprite::create("edi.png");	
 	etiqueta18->setAnchorPoint(Point(0,0));
@@ -333,10 +242,6 @@ void Etiquetas::createLabel()
 	 label18->setAnchorPoint(Point(-0.27, 0.0));
 	 label18->setPosition(Point(0, 0));
 	 etiqueta18->addChild(label18); 
-<<<<<<< HEAD
-//	 otro->agregarEtiquetas(100,1000,"Contraloria");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 	
 	  Sprite* etiqueta19 = Sprite::create("facu.png");
 	etiqueta19->setAnchorPoint(Point(0,0));
@@ -349,10 +254,6 @@ void Etiquetas::createLabel()
 	 label19->setAnchorPoint(Point(-0.33, 0.0));
 	 label19->setPosition(Point(0, 0));
 	 etiqueta19->addChild(label19); 
-<<<<<<< HEAD
-//	 otro->agregarEtiquetas(3430,2400,"Musica");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 	
 	Sprite* etiqueta20 = Sprite::create("facu.png");
 	etiqueta20->setAnchorPoint(Point(0,0));
@@ -365,10 +266,7 @@ void Etiquetas::createLabel()
 	 label20->setAnchorPoint(Point(-0.25, 0.0));
 	 label20->setPosition(Point(0, 0));
 	 etiqueta20->addChild(label20); 
-<<<<<<< HEAD
-//	 otro->agregarEtiquetas(1600,2500,"Informatica"); 
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
+
 	 
 	Sprite* etiqueta21 = Sprite::create("facu.png");
 	etiqueta21->setAnchorPoint(Point(0,0));
@@ -381,10 +279,7 @@ void Etiquetas::createLabel()
 	 label21->setAnchorPoint(Point(-0.30, 0.0));
 	 label21->setPosition(Point(0, 0));
 	 etiqueta21->addChild(label21); 
-<<<<<<< HEAD
-//	 otro->agregarEtiquetas(1400,2700,"Geologia");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
+
 
 	 Sprite* etiqueta22 = Sprite::create("facu.png");
 	etiqueta22->setAnchorPoint(Point(0,0));
@@ -398,11 +293,7 @@ void Etiquetas::createLabel()
     label22->setAnchorPoint(Point(-0.30, 0.0));
 	label22->setPosition(Point(0, 0));
 	etiqueta22->addChild(label22);  
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(2100,3030,"Medicina");
 
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 	 Sprite* etiqueta23 = Sprite::create("facu.png");
 	etiqueta23->setAnchorPoint(Point(0,0));
@@ -416,10 +307,7 @@ void Etiquetas::createLabel()
     label23->setAnchorPoint(Point(-0.30, 0.0));
 	label23->setPosition(Point(0, 0));
 	etiqueta23->addChild(label23); 
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(2550,3150,"Farmacia");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
+
 
 
 	Sprite* etiqueta24 = Sprite::create("facu.png");
@@ -434,10 +322,6 @@ void Etiquetas::createLabel()
     label24->setAnchorPoint(Point(-0.20, 0.0));
 	label24->setPosition(Point(0, 0));
 	etiqueta24->addChild(label24); 
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(2900,2700,"Microbiologia");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 
 	Sprite* etiqueta25 = Sprite::create("facu.png"); 
@@ -452,10 +336,7 @@ void Etiquetas::createLabel()
     label25->setAnchorPoint(Point(-0.40, 0.0));
 	label25->setPosition(Point(0, 0));
 	etiqueta25->addChild(label25); 
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(2900,2700,"Fisica");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
+
 
 	Sprite* etiqueta26 = Sprite::create("facu.png"); 
 	etiqueta26->setAnchorPoint(Point(0,0));
@@ -470,10 +351,7 @@ void Etiquetas::createLabel()
     label26->setAnchorPoint(Point(-0.20, 0.0));
 	label26->setPosition(Point(0, 0));
 	etiqueta26->addChild(label26);
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(1770,1780,"Matematica");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
+
 
 	Sprite* etiqueta27 = Sprite::create("inves.png");
 	etiqueta27->setAnchorPoint(Point(0,0));
@@ -487,10 +365,7 @@ void Etiquetas::createLabel()
     label27->setAnchorPoint(Point(-0.20, 0.0));
 	label27->setPosition(Point(0, 0));
 	etiqueta27->addChild(label27); 
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(2800,2950,"Inv. Sociales");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
+
 	
 	Sprite* etiqueta28 = Sprite::create("facu.png");
 	etiqueta28->setAnchorPoint(Point(0,0));
@@ -503,14 +378,7 @@ void Etiquetas::createLabel()
 	label28->setColor(ccc3(0,0,0));
     label28->setAnchorPoint(Point(-0.40, 0.0));
 	label28->setPosition(Point(0, 0));
-<<<<<<< HEAD
-	etiqueta28->addChild(label28); 
-//	otro->agregarEtiquetas(2850,2450,"Biologia");
-	
-	
-=======
 	etiqueta28->addChild(label28); 	
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 	
 	Sprite* etiqueta29 = Sprite::create("facu.png");
 	etiqueta29->setAnchorPoint(Point(0,0));
@@ -524,10 +392,6 @@ void Etiquetas::createLabel()
     label29->setAnchorPoint(Point(-0.30, 0.0));
 	label29->setPosition(Point(0, 0));
 	etiqueta29->addChild(label29);
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(3350,3300,"Agronomia");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 	Sprite* etiqueta30 = Sprite::create("facu.png");
 	etiqueta30->setAnchorPoint(Point(0,0));
@@ -541,11 +405,6 @@ void Etiquetas::createLabel()
     label30->setAnchorPoint(Point(-0.30, 0.0));
 	label30->setPosition(Point(0, 0));
 	etiqueta30->addChild(label30); 
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(3280,3400,"Zootecnia");
-
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 	Sprite* etiqueta31 = Sprite::create("inves.png");
 	etiqueta31->setAnchorPoint(Point(0,0));
@@ -560,10 +419,6 @@ void Etiquetas::createLabel()
     label31->setAnchorPoint(Point(-0.30, 0.0));
 	label31->setPosition(Point(0, 0));
 	etiqueta31->addChild(label31); 
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(3220,3620,"CIGRAS");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 	Sprite* etiqueta32 = Sprite::create("inves.png");
 	etiqueta32->setAnchorPoint(Point(0,0));
@@ -576,13 +431,7 @@ void Etiquetas::createLabel()
 	label32->setColor(ccc3(0,0,0));
     label32->setAnchorPoint(Point(-0.50, 0.0));
 	label32->setPosition(Point(0, 0));
-<<<<<<< HEAD
-	etiqueta32->addChild(label32); 
-//	otro->agregarEtiquetas(3100,3900,"CITA");
-	
-=======
 	etiqueta32->addChild(label32); 	
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 	
 	Sprite* etiqueta33 = Sprite::create("facu.png");
 	etiqueta33->setAnchorPoint(Point(0,0));
@@ -595,13 +444,8 @@ void Etiquetas::createLabel()
 	label33->setColor(ccc3(0,0,0));
     label33->setAnchorPoint(Point(-0.16, 0.0));
 	label33->setPosition(Point(0, 0));
-<<<<<<< HEAD
 	etiqueta33->addChild(label33); 
-//	otro->agregarEtiquetas(3400,3840,"Tec. de Alimentos");
-	
-=======
 	etiqueta33->addChild(label33); 	
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 	
 	Sprite* etiqueta34 = Sprite::create("inves.png");
 	etiqueta34->setAnchorPoint(Point(0,0));
@@ -614,13 +458,7 @@ void Etiquetas::createLabel()
 	label34->setColor(ccc3(0,0,0));
     label34->setAnchorPoint(Point(-0.30, 0.0));
 	label34->setPosition(Point(0, 0));
-<<<<<<< HEAD
 	etiqueta34->addChild(label34); 
-//	otro->agregarEtiquetas(3620,3750,"CIGRAS");
-	
-=======
-	etiqueta34->addChild(label34); 	
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 	
 	Sprite* etiqueta35 = Sprite::create("clulle.png");
 	etiqueta35->setAnchorPoint(Point(0,0));
@@ -633,10 +471,6 @@ void Etiquetas::createLabel()
 	label35->setAnchorPoint(Point(-0.20, 0.0));
 	label35->setPosition(Point(0, 0));
 	etiqueta35->addChild(label35);
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(3410,2340,"Sala Cullell");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 	Sprite* etiqueta36 = Sprite::create("biblio.png"); 
 	etiqueta36->setAnchorPoint(Point(0,0));
@@ -649,12 +483,7 @@ void Etiquetas::createLabel()
 	label36->setColor(ccc3(0,0,0));
     label36->setAnchorPoint(Point(-0.40, 0.0));
 	label36->setPosition(Point(0, 0));
-	etiqueta36->addChild(label36); 
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(1200,1600,"Tinoco");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
-	
+	etiqueta36->addChild(label36); 	
 	
 	Sprite* etiqueta37 = Sprite::create("ofi.png"); 
 	etiqueta37->setAnchorPoint(Point(0,0));
@@ -668,10 +497,6 @@ void Etiquetas::createLabel()
     label37->setAnchorPoint(Point(-0.40, 0.0));
 	label37->setPosition(Point(0, 0));
 	etiqueta37->addChild(label37); 
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(800,1150,"OEPI");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 	Sprite* etiqueta38 = Sprite::create("anfi.png"); 
 	etiqueta38->setAnchorPoint(Point(0,0));
@@ -684,13 +509,7 @@ void Etiquetas::createLabel()
 	label38->setColor(ccc3(0,0,0));
     label38->setAnchorPoint(Point(-0.80, 0.0));
 	label38->setPosition(Point(0, 0));
-<<<<<<< HEAD
 	etiqueta38->addChild(label38); 
-//	otro->agregarEtiquetas(900,1050,"Av");
-	
-=======
-	etiqueta38->addChild(label38); 	
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 	
 	Sprite* etiqueta39 = Sprite::create("inves.png"); 
 	etiqueta39->setAnchorPoint(Point(0,0));
@@ -704,10 +523,6 @@ void Etiquetas::createLabel()
     label39->setAnchorPoint(Point(-0.20, 0.0));
 	label39->setPosition(Point(0, 0));
 	etiqueta39->addChild(label39);
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(1325,1150,"IIP, CIHAC");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 	
 	Sprite* etiqueta40 = Sprite::create("clinic.png"); 
 	etiqueta40->setAnchorPoint(Point(0,0));
@@ -720,13 +535,7 @@ void Etiquetas::createLabel()
 	label40->setColor(ccc3(0,0,0));
     label40->setAnchorPoint(Point(-0.20, 0.0));
 	label40->setPosition(Point(0, 0));
-<<<<<<< HEAD
 	etiqueta40->addChild(label40);
-//	otro->agregarEtiquetas(1325,1025,"Clinica(OBS)");
-	
-=======
-	etiqueta40->addChild(label40);	
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 	
 	Sprite* etiqueta41 = Sprite::create("facu.png"); 
 	etiqueta41->setAnchorPoint(Point(0,0));
@@ -740,11 +549,6 @@ void Etiquetas::createLabel()
     label41->setAnchorPoint(Point(-0.20, 0.0));
 	label41->setPosition(Point(0, 0));
 	etiqueta41->addChild(label41);
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(1100,875,"Enfermeria");
-
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 	Sprite* etiqueta42 = Sprite::create("facu.png"); 
 	etiqueta42->setAnchorPoint(Point(0,0));
@@ -757,13 +561,7 @@ void Etiquetas::createLabel()
 	label42->setColor(ccc3(0,0,0));
     label42->setAnchorPoint(Point(-0.20, 0.0));
 	label42->setPosition(Point(0, 0));
-<<<<<<< HEAD
 	etiqueta42->addChild(label42);
-//	otro->agregarEtiquetas(1400,800,"Art.Dramaticas");
-	
-=======
-	etiqueta42->addChild(label42);	
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 	
 	Sprite* etiqueta43 = Sprite::create("tv.png"); 
 	etiqueta43->setAnchorPoint(Point(0,0));
@@ -776,11 +574,6 @@ void Etiquetas::createLabel()
     label43->setAnchorPoint(Point(-0.30, 0.0));
 	label43->setPosition(Point(0, 0));
 	etiqueta43->addChild(label43);
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(1490,725,"Canal 15");
-
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 	Sprite* etiqueta44 = Sprite::create("radio.png"); 
 	etiqueta44->setAnchorPoint(Point(0,0));
@@ -794,11 +587,6 @@ void Etiquetas::createLabel()
     label44->setAnchorPoint(Point(-0.20, 0.0));
 	label44->setPosition(Point(0, 0));
 	etiqueta44->addChild(label44);
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(1325,1025,"Radio UCR");
-
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 	Sprite* etiqueta45 = Sprite::create("caje.png"); 
 	etiqueta45->setAnchorPoint(Point(0,0));
@@ -811,13 +599,7 @@ void Etiquetas::createLabel()
 	label45->setColor(ccc3(0,0,0));
     label45->setAnchorPoint(Point(-0.20, 0.0));
 	label45->setPosition(Point(0, 0));
-<<<<<<< HEAD
 	etiqueta45->addChild(label45);
-//	otro->agregarEtiquetas(850,775,"Cajeros/JAP");
-	
-=======
-	etiqueta45->addChild(label45);	
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 	
 	Sprite* etiqueta46 = Sprite::create("ofi.png"); 
 	etiqueta46->setAnchorPoint(Point(0,0));
@@ -831,10 +613,6 @@ void Etiquetas::createLabel()
     label46->setAnchorPoint(Point(-0.30, 0.0));
 	label46->setPosition(Point(0, 0));
 	etiqueta46->addChild(label46);
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(1125,700,"CASED");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 	Sprite* etiqueta47 = Sprite::create("sindi.png"); 
 	etiqueta47->setAnchorPoint(Point(0,0));
@@ -848,11 +626,6 @@ void Etiquetas::createLabel()
     label47->setAnchorPoint(Point(-0.30, 0.0));
 	label47->setPosition(Point(0, 0));
 	etiqueta47->addChild(label47);
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(1325,630,"SINDEU");
-
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 	Sprite* etiqueta48 = Sprite::create("ofi.png"); 
 	etiqueta48->setAnchorPoint(Point(0,0));
@@ -865,13 +638,7 @@ void Etiquetas::createLabel()
 	label48->setColor(ccc3(0,0,0));
     label48->setAnchorPoint(Point(-0.15, 0.0));
 	label48->setPosition(Point(0, 0));
-<<<<<<< HEAD
 	etiqueta48->addChild(label48);
-//	otro->agregarEtiquetas(900,400,"C.C.Poblacion");
-	
-=======
-	etiqueta48->addChild(label48);	
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 	
 	Sprite* etiqueta49 = Sprite::create("ofi.png"); 
 	etiqueta49->setAnchorPoint(Point(0,0));
@@ -884,13 +651,7 @@ void Etiquetas::createLabel()
 	label49->setColor(ccc3(0,0,0));
     label49->setAnchorPoint(Point(-0.45, 0.0));
 	label49->setPosition(Point(0, 0));
-<<<<<<< HEAD
 	etiqueta49->addChild(label49);
-//	otro->agregarEtiquetas(850,250,"CCA");
-	
-=======
-	etiqueta49->addChild(label49);	
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 	
 	Sprite* etiqueta50 = Sprite::create("ofi.png"); 
 	etiqueta50->setAnchorPoint(Point(0,0));
@@ -904,12 +665,6 @@ void Etiquetas::createLabel()
     label50->setAnchorPoint(Point(-0.20, 0.0));
 	label50->setPosition(Point(0, 0));
 	etiqueta50->addChild(label50);
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(1025,170,"Of.Juridica");
-
-
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 	 Sprite* etiqueta51 = Sprite::create("pc.png");
 	 etiqueta51->setAnchorPoint(Point(0,0));
@@ -922,11 +677,7 @@ void Etiquetas::createLabel()
 	 label51->setAnchorPoint(Point(-0.85, 0.0));
 	 label51->setPosition(Point(0, 0));
 	 etiqueta51->addChild(label51); 
-<<<<<<< HEAD
-//	 otro->agregarEtiquetas(1430,2500,"C.I");
 
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 	Sprite* etiqueta52 = Sprite::create("facu.png"); 
 	etiqueta52->setAnchorPoint(Point(0,0));
@@ -940,10 +691,6 @@ void Etiquetas::createLabel()
     label52->setAnchorPoint(Point(-0.20, 0.0));
 	label52->setPosition(Point(0, 0));
 	etiqueta52->addChild(label52); 
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(700,2960,"Bibliotecologia");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 	Sprite* etiqueta53 = Sprite::create("facu.png"); 
 	etiqueta53->setAnchorPoint(Point(0,0));
@@ -957,10 +704,6 @@ void Etiquetas::createLabel()
     label53->setAnchorPoint(Point(-0.25, 0.0));
 	label53->setPosition(Point(0, 0));
 	etiqueta53->addChild(label53); 
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(610,3000,"Tec. Salud");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 	Sprite* etiqueta54 = Sprite::create("facu.png"); 
 	etiqueta54->setAnchorPoint(Point(0,0));
@@ -972,13 +715,7 @@ void Etiquetas::createLabel()
 	label54->setColor(ccc3(0,0,0));
     label54->setAnchorPoint(Point(-0.25, 0.0));
 	label54->setPosition(Point(0, 0));
-<<<<<<< HEAD
 	etiqueta54->addChild(label54); 
-//	otro->agregarEtiquetas(700,3100,"Preescolar");
-	
-=======
-	etiqueta54->addChild(label54); 	
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 	
 	Sprite* etiqueta55 = Sprite::create("ofi.png"); 
 	etiqueta55->setAnchorPoint(Point(0,0));
@@ -992,10 +729,6 @@ void Etiquetas::createLabel()
     label55->setAnchorPoint(Point(-0.15, 0.0));
 	label55->setPosition(Point(0, 0));
 	etiqueta55->addChild(label55); 
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(700,2450,"Casa de Idiomas");
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 	Sprite* etiqueta56 = Sprite::create("edi.png");
 	etiqueta56->setAnchorPoint(Point(0,0));
@@ -1009,11 +742,6 @@ void Etiquetas::createLabel()
     label56->setAnchorPoint(Point(-0.130, 0.00));
 	label56->setPosition(Point(0, 0));
 	etiqueta56->addChild(label56);  
-<<<<<<< HEAD
-//	otro->agregarEtiquetas(2200,1000,"Edificio Saprissa");
-
-=======
->>>>>>> efb0540aa223461f11423e2d36e733dff4238338
 
 	/*	EditBox* m_pEditName;
 

@@ -18,17 +18,6 @@ void Posicion::agregarEtiquetas(float x, float y, std::string etiqueta)
 
 } 
 
-int Posicion::obtenerEtiquetas(char* etiqueta)
-{ 
-	log("Etiqueta a buscar = %s", etiqueta);
-	for (int i = 0;i<lugares.size();++i)
-		if (lugares[i].nombre==etiqueta)
-		{
-			log("Posicion en el vector = %i", i);
-			return i;
-		}
-	return -1;
-} 
 
 void Posicion::llenarVector()
 {
@@ -106,7 +95,7 @@ int Posicion::obtenerEtiquetas(const std::string etiqueta)
 		}
 	return -1;
 } 
-
+/*
 void Posicion::llenarVector()
 {
 	agregarEtiquetas(0,-1024,"Derecho");
@@ -167,9 +156,9 @@ void Posicion::llenarVector()
 	agregarEtiquetas(-180,-1515,"Casa de Idiomas");
 	agregarEtiquetas(-1325,-435,"Edificio Saprissa");
 } 
+*/
 
-
-/*Posicion::~Posicion(void)
+/* Posicion::~Posicion(void)
 {  
 	delete Posicion;
 }*/
